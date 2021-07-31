@@ -1,9 +1,15 @@
 ---
 layout: default
-title: Hank Quinlan, Horrible Cop
+title: laurent baumann
 ---
+<h1>Hi there, I'm Laurent!</h1>
+<p>This page has been designed, because I made decisions.</p>
 
-		<div class="blurb">
-			<h1>Hi there, I'm Hank Quinlan!</h1>
-			<p>I'm best known as the horrible cop from <em>A Touch of Evil</em>. Don't trust me. <a href="/about">Read more about my life...</a></p>
-		</div> 
+<ul class="posts">
+
+	{% for post in site.posts %}
+	  <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+	{% endfor %}
+	  
+  </ul>
+  
