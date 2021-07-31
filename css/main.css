@@ -1,6 +1,7 @@
 body {
-    margin: 60px auto;
-    width: 70%;
+    margin: 30px auto;
+    padding: 30px;
+    /* width: 70%; */
     max-width: 700px;
     font-family: sans-serif;
 }
