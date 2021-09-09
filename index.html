@@ -7,11 +7,21 @@ emoji: 📚
 <p>Eventually there will be real content on this website.</p>
 <p>Today is not the day.</p>
 
+<h2>Some thoughts</h2>
 <ul class="posts">
-	{% for post in site.posts %}
+	{% for post in site.categories.blog %}
 	<li>
 		<span>{{ post.date | date_to_string }}</span> &raquo; {{ post.emoji }}
 		<a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
 	</li>
 	{% endfor %}
 </ul>
+
+<h2>Some works</h2>
+{% for post in site.categories.portfolio %}
+<div>
+	<img src="/images/{{ post.image }}" alt="" width="100%" />
+	<a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+</div>
+{% endfor %}
+
