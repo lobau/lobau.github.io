@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
     font-family: "Plus Jakarta";
     font-weight: 700 900;
     src: url("/css/fonts/PlusJakartaSans-ExtraBold.woff2") format("woff2"),
@@ -119,8 +119,6 @@
     font-style: italic;
   }
 
-  /* Norm */
-
   @font-face {
     font-family: 'Norm';
     src: url(/css/fonts/Norm-Regular.ttf) format('truetype'),
@@ -151,27 +149,77 @@
          url(/css/fonts/Norm-BoldItalic.woff) format('woff');
     font-weight: 500 900;
     font-style: italic;
+  } */
+
+  @font-face {
+    font-family: 'Hauora';
+    src: url(/css/fonts/Hauora-Regular.ttf) format('truetype'),
+         url(/css/fonts/Hauora-Regular.woff2) format('woff2'),
+         url(/css/fonts/Hauora-Regular.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
   }
+
+
 
 body {
     margin: 30px auto;
     padding: 30px;
     max-width: 700px;
     /* font-family: "Plus Jakarta", sans-serif; */
-    font-family: "Manrope", sans-serif;
+    font-family: "Hauora", sans-serif;
     /* font-family: "Mabry Pro", sans-serif; */
     /* font-family: "Norm", sans-serif; */
-    font-feature-settings: "ss02";
+    /* font-feature-settings: "ss02"; */
     color: dimgray;
 }
 
-a {
+/* a {
     text-decoration: none;
     color: slategray;
 }
 
 a:hover {
     text-decoration: underline;
+} */
+
+a, a:link, a:visited {
+  display:inline;
+  position:relative;
+  padding: 0.2em;
+  text-decoration:none;
+  color: indigo;
+  /* font-weight:700; */
+  white-space: nowrap;
+}
+
+a:focus {
+  outline: 1px solid indigo;
+}
+
+a:before {
+  transform:scaleY(.07);
+  transform-origin:bottom right
+}
+
+a:hover:before {
+  transform:scaleY(1);
+  transform-origin:bottom left;
+  background: lavender;
+}
+
+a:before{
+  content:" ";
+  display:block;
+  position:absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  inset:0 0 0 0;
+  background: lavender;
+  z-index:-1;
+  transition:all .25s ease
 }
 
 p, ul {
@@ -200,6 +248,7 @@ h3 {
 
 h4 {
     font-size: 1.9em;
+    font-weight: 400;
 }
 
 nav ul, footer ul {
