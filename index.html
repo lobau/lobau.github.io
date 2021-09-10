@@ -1,13 +1,14 @@
 ---
 layout: default
 title: laurent baumann
-emoji: 📚
+emoji: 👋
 ---
 <h1>{{ page.emoji }}<br />Hi there, I'm Laurent!</h1>
-<p>Eventually there will be real content on this website.</p>
-<p>Today is not the day.</p>
+<p>I discover pain points, design solutions, and help people discover them.</p>
+<p>Since 2006, I helped companies such as Sophiestication, Bohemian Coding, Upthere, Apple, Sandisk, and more to build products used by millions.</p>
+<p>In 2020, I decided to build my own company, With labs.</p>
 
-<h2>Some thoughts</h2>
+<h2>Latest thoughts</h2>
 <ul class="posts">
 	{% for post in site.categories.blog %}
 	<li>
@@ -15,12 +16,15 @@ emoji: 📚
 		<a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
 	</li>
 	{% endfor %}
+	<li>
+		<a href="/blog">See all...</a>
+	</li>
 </ul>
 
-<h2>Some works</h2>
+<h2>Past projects</h2>
 {% for post in site.categories.portfolio %}
-<div>
+<section>
 	<img src="/images/{{ post.image }}" alt="" width="100%" />
 	<a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-</div>
+</section>
 {% endfor %}
