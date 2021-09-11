@@ -54,10 +54,17 @@
   font-weight: 800;
 }
 
-:root,
+:root {
+  --section-spacing: 6em;
+  --header-width: 36em;
+  --main-width: 64em;
+}
+
 :root.light {
   --color-background: white;
   --color-text: dimgray;
+  --color-text-secondary: lightgray;
+  --color-faint: gainsboro;
 
   --whale-background: Lavender;
   --whale-body: MediumPurple;
@@ -71,6 +78,8 @@
 :root.dark {
   --color-background: black;
   --color-text: silver;
+  --color-text-secondary: dimgray;
+  --color-faint: DimGray;
 
   --whale-background: Indigo;
   --whale-body: MediumPurple;
@@ -81,50 +90,183 @@
   --visible-light: none;
 }
 
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: black;
+    --color-text: silver;
+    --color-text-secondary: dimgray;
+    --color-faint: DimGray;
+  
+    --whale-background: Indigo;
+    --whale-body: MediumPurple;
+    --whale-belly: rgb(33, 31, 46);
+    --whale-eye: lavender;
+  
+    --visible-dark: block;
+    --visible-light: none;
+  }
+} */
+
+@media only screen and (min-width: 72em) {
+  div {
+    columns: auto 3;
+    column-gap: 40px;
+    column-rule: 1px dotted var(--color-faint);
+  }
+}
+
+@media only screen and (max-width: 72em) {
+  :root {
+    --section-spacing: 6em;
+    --header-width: 36em;
+    --main-width: 40em;
+  }
+
+  div {
+    columns: auto 2;
+    column-gap: 20px;
+  }
+}
+
+@media only screen and (max-width: 48em) {
+  :root {
+    --section-spacing: 6em;
+    --header-width: 32em;
+    --main-width: 32em;
+  }
+
+  div {
+    columns: auto 1;
+  }
+}
+
 * {
+  padding: 0;
+  margin: 0;
+  border: none;
   /* outline: 1px solid rgba(255, 0, 0, 0.2); */
 }
 
-svg {
-  display: block;
-}
-
 body {
-    margin: 30px auto;
-    padding: 30px;
-    max-width: 700px;
+    padding: 0em 2em;
     font-family: "Hauora", sans-serif;
     font-weight: 500;
     color: var(--color-text);
     background-color: var(--color-background);
 }
 
-a, a:link, a:visited {
+nav {
+  margin-bottom: 2em;
+  /* margin-top: var(--section-spacing);; */
+  /* background-color: red; */
+}
+
+svg {
+  display: block;
+}
+
+main {
+  max-width: var(--main-width);
+  margin: 0 auto;
+  padding: 6em 0 6em 0;
+  /* background-color: blue; */
+}
+
+main > header {
+  max-width: var(--header-width);
+  margin-bottom: var(--section-spacing);
+}
+
+section {
+  max-width: var(--main-width);
+  margin-bottom: var(--section-spacing);
+}
+
+h1 {
+  font-size: 1.8em;
+  margin-bottom: 1em;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+time {
+  font-size: 1.5em;
+  font-weight: 300;
+  text-align: right;
+  color: var(--color-text-secondary);
+}
+
+p {
+  margin-bottom: 1.6em;
+  line-height: 1.6em;
+}
+
+article {
+  margin-bottom: var(--section-spacing);
+}
+
+article > header {
+  display: grid;
+  /* flex-flow: row wrap; */
+  grid-template-columns: auto 3em;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  margin-bottom: 1em;
+}
+
+article > header > * {
+  flex: 1 auto;
+}
+
+iframe {
+  width: 100%;
+  height: 20em;
+  animation: fadein 1s;
+  overflow: hidden;
+  border-radius: 0.5em;
+  margin-bottom: 1em;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* div {
+  columns: auto 3;
+  column-gap: 40px;
+  column-rule: 1px dotted var(--color-faint);
+} */
+
+p > a, p > a:link, p > a:visited {
   display:inline;
   position:relative;
-  padding: 0.2em;
+  padding: 0em 0.2em;
   text-decoration:none;
   color: var(--whale-eye);
   white-space: nowrap;
-  border-radius: 4px;
+  border-radius: .25em;
   overflow: hidden;
 }
 
-a:focus {
+p > a:focus {
   outline: 1px dashed var(--whale-belly);
 }
 
-a:before {
+p > a:before {
   transform:scaleY(.4);
   transform-origin:bottom right
 }
 
-a:hover:before {
+p > a:hover:before {
   transform:scaleY(1);
   transform-origin:bottom left;
 }
 
-a:before{
+p > a:before{
   content:" ";
   display:block;
   position:absolute;
@@ -136,10 +278,25 @@ a:before{
   background: var(--whale-background);
   z-index:-1;
   transition: transform .25s ease;
-  border-radius: 4px;
+  border-radius: .25em;
   overflow: hidden;
 }
 
-p {
-    line-height: 1.8;
+button {
+  padding: 0.5em 1em;
+  background: var(--whale-background);
+  color: var(--whale-eye);
+  white-space: nowrap;
+  border-radius: .25em;
+  overflow: hidden;
+  font-size: 1em;
+  font-weight: 500;
+  margin-bottom: 1em;
+  margin-right: 0.4em;
+  /* transition: background .25s ease, color .25s ease; */
+}
+
+button:hover {
+  background: var(--whale-body);
+  color: var(--whale-background);
 }

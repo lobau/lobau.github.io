@@ -5,25 +5,18 @@ emoji: 👋
 ---
 <header>
 	<h1>Laurent Baumann</h1>
-	<p>I am currently building <a target="_blank" href="https://tilde.so">Tilde</a>.</p>
-	<p>I discover pain points, design solutions, and help people discover them.</p>
+	<p>I am currently the cofounder and head of product at <a target="_blank" href="https://tilde.so">Tilde</a>.</p>
 	<p>Since 2006, I helped companies such as Sophiestication, Bohemian Coding, Upthere, Apple, Sandisk, and more to build products used by millions.</p>
-	<p>In 2020, I decided to build my own company, With labs.</p>
-	<p>
-		<a target="_blank" href="https://twitter.com/lobau">Twitter</a>
-		<a target="_blank" href="https://dribbble.com/lobau">Dribbble</a>
-		<a target="_blank" href="https://www.linkedin.com/in/laurentbaumann/">Linkedin</a>
-	</p>
+	<p>I discover pain points, design solutions, and help people discover them.</p>
+	<a target="_blank" href="https://twitter.com/lobau"><button>Twitter</button></a>
+	<a target="_blank" href="https://dribbble.com/lobau"><button>Dribbble</button></a>
+	<a target="_blank" href="https://www.linkedin.com/in/laurentbaumann/"><button>Linkedin</button></a>
+	<!-- <p>
+		<a href="https://twitter.com/lobau">Twitter</a>
+		<a href="https://dribbble.com/lobau">Dribbble</a>
+		<a href="https://www.linkedin.com/in/laurentbaumann/">Linkedin</a>
+	</p> -->
 </header>
-
-<!-- <p style="font-size: 1em; font-weight: 200;">Sphinx of black quartz, judge my vow.</p>
-<p style="font-size: 1em; font-weight: 300;">Sphinx of black quartz, judge my vow.</p>
-<p style="font-size: 1em; font-weight: 400;">Sphinx of black quartz, judge my vow.</p>
-<p style="font-size: 1em; font-weight: 500;">Sphinx of black quartz, judge my vow.</p>
-<p style="font-size: 1em; font-weight: 600;">Sphinx of black quartz, judge my vow.</p>
-<p style="font-size: 1em; font-weight: 700;">Sphinx of black quartz, judge my vow.</p>
-<p style="font-size: 1em; font-weight: 800;">Sphinx of black quartz, judge my vow.</p> -->
-
 
 <!-- <section>
 	<h2>Latest thoughts</h2>
@@ -36,12 +29,17 @@ emoji: 👋
 	<a href="/blog">See all...</a>
 </section> -->
 
-<!-- <section>
-	<h2>Past projects</h2>
+<section>
 	{% for post in site.categories.portfolio %}
 	<article>
-		<img src="/images/{{ post.image }}" alt="" width="100%" />
-		<a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+		<header>
+			<h2>{{ post.title }}</h2>
+			<time>{{ post.date | date: "%Y" }}</time>
+		</header>
+		<iframe src="/frames/{{ post.frameUrl }}/index.html"></iframe>
+		<div>
+			{{ post.content }}
+		</div>
 	</article>
 	{% endfor %}
-</section> -->
+</section>
