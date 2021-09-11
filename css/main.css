@@ -1,211 +1,127 @@
-/* @font-face {
-    font-family: "Plus Jakarta";
-    font-weight: 700 900;
-    src: url("/css/fonts/PlusJakartaSans-ExtraBold.woff2") format("woff2"),
-            url("/css/fonts/PlusJakartaSans-ExtraBold.woff") format("woff"),
-            url("/css/fonts/PlusJakartaSans-ExtraBold.ttf") format("truetype");
+@font-face {
+  font-family: 'Hauora';
+  src: url(/css/fonts/Hauora-ExtraLight.ttf) format('truetype'),
+        url(/css/fonts/Hauora-ExtraLight.woff2) format('woff2'),
+        url(/css/fonts/Hauora-ExtraLight.woff) format('woff');
+  font-weight: 200;
 }
 
 @font-face {
-    font-family: "Plus Jakarta";
-    font-weight: 700 900;
-    font-style: oblique 20deg 50deg;
-    src: url("/css/fonts/PlusJakartaSans-ExtraBoldItalic.woff2") format("woff2"),
-            url("/css/fonts/PlusJakartaSans-ExtraBoldItalic.woff") format("woff"),
-            url("/css/fonts/PlusJakartaSans-ExtraBoldItalic.ttf") format("truetype");
+  font-family: 'Hauora';
+  src: url(/css/fonts/Hauora-Light.ttf) format('truetype'),
+        url(/css/fonts/Hauora-Light.woff2) format('woff2'),
+        url(/css/fonts/Hauora-Light.woff) format('woff');
+  font-weight: 300;
 }
 
 @font-face {
-    font-family: "Plus Jakarta";
-    font-weight: 500 600;
-    src: url("/css/fonts/PlusJakartaSans-Bold.woff2") format("woff2"),
-            url("/css/fonts/PlusJakartaSans-Bold.woff") format("woff"),
-            url("/css/fonts/PlusJakartaSans-Bold.ttf") format("truetype");
+  font-family: 'Hauora';
+  src: url(/css/fonts/Hauora-Regular.ttf) format('truetype'),
+        url(/css/fonts/Hauora-Regular.woff2) format('woff2'),
+        url(/css/fonts/Hauora-Regular.woff) format('woff');
+  font-weight: 400;
 }
 
 @font-face {
-    font-family: "Plus Jakarta";
-    font-weight: 500 600;
-    font-style: oblique 20deg 50deg;
-    src: url("/css/fonts/PlusJakartaSans-BoldItalic.woff2") format("woff2"),
-            url("/css/fonts/PlusJakartaSans-BoldItalic.woff") format("woff"),
-            url("/css/fonts/PlusJakartaSans-BoldItalic.ttf") format("truetype");
+  font-family: 'Hauora';
+  src: url(/css/fonts/Hauora-Medium.ttf) format('truetype'),
+        url(/css/fonts/Hauora-Medium.woff2) format('woff2'),
+        url(/css/fonts/Hauora-Medium.woff) format('woff');
+  font-weight: 500;
 }
 
 @font-face {
-    font-family: "Plus Jakarta";
-    font-weight: 400;
-    src: url("/css/fonts/PlusJakartaSans-Regular.woff2") format("woff2"),
-            url("/css/fonts/PlusJakartaSans-Regular.woff") format("woff"),
-            url("/css/fonts/PlusJakartaSans-Regular.ttf") format("truetype");
+  font-family: 'Hauora';
+  src: url(/css/fonts/Hauora-SemiBold.ttf) format('truetype'),
+        url(/css/fonts/Hauora-SemiBold.woff2) format('woff2'),
+        url(/css/fonts/Hauora-SemiBold.woff) format('woff');
+  font-weight: 600;
 }
 
 @font-face {
-    font-family: "Plus Jakarta";
-    font-weight: 400;
-    font-style: oblique 20deg 50deg;
-    src: url("/css/fonts/PlusJakartaSans-Italic.woff2") format("woff2"),
-            url("/css/fonts/PlusJakartaSans-Italic.woff") format("woff"),
-            url("/css/fonts/PlusJakartaSans-Italic.ttf") format("truetype");
+  font-family: 'Hauora';
+  src: url(/css/fonts/Hauora-Bold.ttf) format('truetype'),
+        url(/css/fonts/Hauora-Bold.woff2) format('woff2'),
+        url(/css/fonts/Hauora-Bold.woff) format('woff');
+  font-weight: 700;
 }
 
 @font-face {
-    font-family: "Manrope";
-    font-weight: 400;
-    src: url("/css/fonts/Manrope-Regular.woff2") format("woff2"),
-            url("/css/fonts/Manrope-Regular.woff") format("woff"),
-            url("/css/fonts/Manrope-Regular.ttf") format("truetype");
+  font-family: 'Hauora';
+  src: url(/css/fonts/Hauora-ExtraBold.ttf) format('truetype'),
+        url(/css/fonts/Hauora-ExtraBold.woff2) format('woff2'),
+        url(/css/fonts/Hauora-ExtraBold.woff) format('woff');
+  font-weight: 800;
 }
 
-@font-face {
-    font-family: "Manrope";
-    font-weight: 500 900;
-    src: url("/css/fonts/Manrope-ExtraBold.woff2") format("woff2"),
-            url("/css/fonts/Manrope-ExtraBold.woff") format("woff"),
-            url("/css/fonts/Manrope-ExtraBold.ttf") format("truetype");
+:root,
+:root.light {
+  --color-background: white;
+  --color-text: dimgray;
+
+  --whale-background: Lavender;
+  --whale-body: MediumPurple;
+  --whale-belly: SlateBlue;
+  --whale-eye: Indigo;
+
+  --visible-dark: none;
+  --visible-light: block;
 }
 
-@font-face {
-    font-family: 'Mabry Pro';
-    src: url(/css/fonts/mabry-regular-pro.ttf) format('truetype'),
-         url(/css/fonts/mabry-regular-pro.woff2) format('woff2'),
-         url(/css/fonts/mabry-regular-pro.woff) format('woff');
-    font-weight: normal;
-    font-style: normal;
-  }
-   
-  @font-face {
-    font-family: 'Mabry Pro';
-    src: url(/css/fonts/mabry-bold-pro.ttf) format('truetype'),
-         url(/css/fonts/mabry-bold-pro.woff2) format('woff2'),
-         url(/css/fonts/mabry-bold-pro.woff) format('woff');
-    font-weight: bold;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'Mabry Pro';
-    src: url(/css/fonts/mabry-light-pro.ttf) format('truetype'),
-         url(/css/fonts/mabry-light-pro.woff2) format('woff2'),
-         url(/css/fonts/mabry-light-pro.woff) format('woff');
-    font-weight: lighter;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'Mabry Pro';
-    src: url(/css/fonts/mabry-italic-pro.ttf) format('truetype'),
-         url(/css/fonts/mabry-italic-pro.woff2) format('woff2'),
-         url(/css/fonts/mabry-italic-pro.woff) format('woff');
-    font-weight: normal;
-    font-style: italic;
-  }
-  
-  @font-face {
-    font-family: 'Mabry Pro';
-    src: url(/css/fonts/mabry-bold-italic-pro.ttf) format('truetype'),
-         url(/css/fonts/mabry-bold-italic-pro.woff2) format('woff2'),
-         url(/css/fonts/mabry-bold-italic-pro.woff) format('woff');
-    font-weight: bold;
-    font-style: italic;
-  }
-  
-  @font-face {
-    font-family: 'Mabry Pro';
-    src: url(/css/fonts/mabry-light-italic-pro.ttf) format('truetype'),
-         url(/css/fonts/mabry-light-italic-pro.woff2) format('woff2'),
-         url(/css/fonts/mabry-light-italic-pro.woff) format('woff');
-    font-weight: lighter;
-    font-style: italic;
-  }
+:root.dark {
+  --color-background: black;
+  --color-text: silver;
 
-  @font-face {
-    font-family: 'Norm';
-    src: url(/css/fonts/Norm-Regular.ttf) format('truetype'),
-         url(/css/fonts/Norm-Regular.woff) format('woff');
-    font-weight: 400;
-    font-style: normal;
-  }
+  --whale-background: Indigo;
+  --whale-body: MediumPurple;
+  --whale-belly: SlateBlue;
+  --whale-eye: lavender;
 
-  @font-face {
-    font-family: 'Norm';
-    src: url(/css/fonts/Norm-RegularItalic.ttf) format('truetype'),
-         url(/css/fonts/Norm-RegularItalic.woff) format('woff');
-    font-weight: 400;
-    font-style: italic;
-  }
+  --visible-dark: block;
+  --visible-light: none;
+}
 
-  @font-face {
-    font-family: 'Norm';
-    src: url(/css/fonts/Norm-Bold.ttf) format('truetype'),
-         url(/css/fonts/Norm-Bold.woff) format('woff');
-    font-weight: 500 900;
-    font-style: normal;
-  }
+* {
+  /* outline: 1px solid rgba(255, 0, 0, 0.2); */
+}
 
-  @font-face {
-    font-family: 'Norm';
-    src: url(/css/fonts/Norm-BoldItalic.ttf) format('truetype'),
-         url(/css/fonts/Norm-BoldItalic.woff) format('woff');
-    font-weight: 500 900;
-    font-style: italic;
-  } */
-
-  @font-face {
-    font-family: 'Hauora';
-    src: url(/css/fonts/Hauora-Regular.ttf) format('truetype'),
-         url(/css/fonts/Hauora-Regular.woff2) format('woff2'),
-         url(/css/fonts/Hauora-Regular.woff) format('woff');
-    font-weight: normal;
-    font-style: normal;
-  }
-
-
+svg {
+  display: block;
+}
 
 body {
     margin: 30px auto;
     padding: 30px;
     max-width: 700px;
-    /* font-family: "Plus Jakarta", sans-serif; */
     font-family: "Hauora", sans-serif;
-    /* font-family: "Mabry Pro", sans-serif; */
-    /* font-family: "Norm", sans-serif; */
-    /* font-feature-settings: "ss02"; */
-    color: dimgray;
+    font-weight: 500;
+    color: var(--color-text);
+    background-color: var(--color-background);
 }
-
-/* a {
-    text-decoration: none;
-    color: slategray;
-}
-
-a:hover {
-    text-decoration: underline;
-} */
 
 a, a:link, a:visited {
   display:inline;
   position:relative;
   padding: 0.2em;
   text-decoration:none;
-  color: indigo;
-  /* font-weight:700; */
+  color: var(--whale-eye);
   white-space: nowrap;
+  border-radius: 4px;
+  overflow: hidden;
 }
 
 a:focus {
-  outline: 1px solid indigo;
+  outline: 1px dashed var(--whale-belly);
 }
 
 a:before {
-  transform:scaleY(.07);
+  transform:scaleY(.4);
   transform-origin:bottom right
 }
 
 a:hover:before {
   transform:scaleY(1);
   transform-origin:bottom left;
-  background: lavender;
 }
 
 a:before{
@@ -217,65 +133,13 @@ a:before{
   bottom:0;
   left:0;
   inset:0 0 0 0;
-  background: lavender;
+  background: var(--whale-background);
   z-index:-1;
-  transition:all .25s ease
+  transition: transform .25s ease;
+  border-radius: 4px;
+  overflow: hidden;
 }
 
-p, ul {
-    font-size: 1.2em;
-    line-height: 1.7em;
-}
-
-h1 {
-    font-size: 2.5em;
-    letter-spacing: -0.02em;
-    font-weight: 400;
-    /* font-feature-settings: "ss02"; */
-}
-
-h2 {
-    font-size: 2em;
-    font-weight: 400;
-    letter-spacing: -0.02em;
-}
-
-h3 {
-    font-size: 1.5em;
-    font-weight: 400;
-    letter-spacing: -0.02em;
-}
-
-h4 {
-    font-size: 1.9em;
-    font-weight: 400;
-}
-
-nav ul, footer ul {
-    font-size: 1em;
-    padding: 0px;
-    list-style: none;
-    font-weight: bold;
-}
-
-nav ul li, footer ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-footer {
-    border-top: 1px solid lightgray;
-    font-size: .8em;
-}
-
-/* Blog */
-
-ul.posts {
-    margin: 20px auto 40px;
-    font-size: 1.2em;
-    /* font-family: monospace; */
-}
-
-ul.posts li {
-    list-style: none;
+p {
+    line-height: 1.8;
 }

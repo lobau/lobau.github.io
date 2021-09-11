@@ -4,11 +4,39 @@
 <head>
   <title>{{ page.title }}</title>
   <link rel="stylesheet" type="text/css" href="/css/main.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>{{ page.emoji }}</text></svg>">
+  <!-- <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>{{ page.emoji }}</text></svg>"> -->
+  <link rel="icon" href="/brand/whale.svg">
+
+  <script type="text/javascript">
+    setTheme = themeName => {
+        localStorage.setItem('theme', themeName);
+        document.documentElement.className = themeName;
+    }
+    
+    toggleTheme = () => (localStorage.getItem('theme') === 'dark') ? setTheme('light') : setTheme('dark');
+    
+    (function () {
+      if (localStorage.getItem('theme') === 'dark') {
+          setTheme('dark');
+      } else {
+          if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            setTheme('dark');
+          } else {
+            setTheme('light');
+          }
+      }
+    })();
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        e.matches ? setTheme("dark") : setTheme("light");
+    });
+
+  </script>
 </head>
 
 
 <body>
+  {% include header.html %}
   <main>
     {{ content }}
   </main>
