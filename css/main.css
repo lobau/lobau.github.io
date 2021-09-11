@@ -66,25 +66,41 @@
   --color-text-secondary: lightgray;
   --color-faint: gainsboro;
 
-  --whale-background: Lavender;
+  /* --whale-background: Lavender;
   --whale-body: MediumPurple;
   --whale-belly: SlateBlue;
-  --whale-eye: Indigo;
+  --whale-eye: Indigo; */
+
+  --whale-background: aliceblue;
+  --whale-body: deepskyblue;
+  --whale-belly: lightskyblue;
+  --whale-eye: darkblue;
 
   --visible-dark: none;
   --visible-light: block;
 }
 
 :root.dark {
+  /* --color-background: black; */
   --color-background: black;
   --color-text: silver;
   --color-text-secondary: dimgray;
   --color-faint: DimGray;
 
-  --whale-background: Indigo;
+  /* --whale-background: Indigo;
   --whale-body: MediumPurple;
   --whale-belly: SlateBlue;
-  --whale-eye: lavender;
+  --whale-eye: lavender; */
+
+  /* --whale-background: darkslateblue;
+  --whale-body: orchid;
+  --whale-belly: mediumpurple;
+  --whale-eye: aliceblue; */
+
+  --whale-background: darkslateblue;
+  --whale-body: PaleTurquoise;
+  --whale-belly: lightskyblue;
+  --whale-eye: aliceblue;
 
   --visible-dark: block;
   --visible-light: none;
@@ -250,20 +266,27 @@ p > a, p > a:link, p > a:visited {
   white-space: nowrap;
   border-radius: .25em;
   overflow: hidden;
+  /* transition: all .25s ease; */
+  font-weight: 500;
 }
+
+/* p > a:hover {
+  color: var(--whale-background);
+} */
 
 p > a:focus {
   outline: 1px dashed var(--whale-belly);
 }
 
 p > a:before {
-  transform:scaleY(.4);
+  transform:scaleY(.1);
   transform-origin:bottom right
 }
 
 p > a:hover:before {
   transform:scaleY(1);
   transform-origin:bottom left;
+  /* background: var(--whale-body); */
 }
 
 p > a:before{
@@ -293,7 +316,8 @@ button {
   font-weight: 500;
   margin-bottom: 1em;
   margin-right: 0.4em;
-  transition: background .25s ease, color .25s ease;
+  /* transition: background .25s ease, color .25s ease; */
+  font-weight: 500;
 }
 
 button:hover {
