@@ -1,8 +1,8 @@
 ---
 layout: work
-title: "With & Tilde"
+title: "Various Icons"
 header: "Free, instant meetings for all your collaborative needs"
-date: 2021-08-10
+date: 2005-08-10
 frameUrl: tilde
 ---
 [Everyone’s familiar](https://tilde.so) with Lewis Carroll’s famous children’s classic and the huge influence it’s had on modern culture. The Mad Hatter, the Duchess, the Cheshire Cat, the White Rabbit, the Caterpillar—all of these strange and familiar creatures appear in Alice, and the nonsensical style, memorable poems, and colorful set pieces are just as influential.

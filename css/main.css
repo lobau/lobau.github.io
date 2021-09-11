@@ -293,7 +293,7 @@ button {
   font-weight: 500;
   margin-bottom: 1em;
   margin-right: 0.4em;
-  /* transition: background .25s ease, color .25s ease; */
+  transition: background .25s ease, color .25s ease;
 }
 
 button:hover {

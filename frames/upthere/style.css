@@ -1,0 +1,12 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+html, body {
+	background: #e8b976;
+	overflow: hidden;
+}
+
+#canvas {
+ background-color: #e8b976;
+}
