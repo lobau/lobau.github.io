@@ -72,6 +72,8 @@ window.onload = function () {
   for (var i = 0; i < draggables.length; i++) {
     dragElement(draggables.item(i));
   }
+
+  update();
 };
 
 function didntGetStream() {
@@ -95,41 +97,40 @@ function gotStream(stream) {
 }
 
 function update(time) {
-  var h1 = Math.min(8, meter.volume * 120 + 2);
-  var y1 = 12 - h1 / 2;
-
-  var h2 = Math.min(12, meter.volume * 180 + 2);
-  var y2 = 12 - h2 / 2;
-
-  var h3 = Math.min(8, meter.volume * 120 + 2);
-  var y3 = 12 - h3 / 2;
-
-  document.getElementById("equalizer").innerHTML = `<svg fill="#444">
-    <rect x="6" y="${y1}" width="2" height="${h1}" rx="1"></rect>
-    <rect x="11" y="${y2}" width="2" height="${h2}" rx="1"></rect>
-    <rect x="16" y="${y3}" width="2" height="${h3}" rx="1"></rect>
-  </svg>`;
-
-  document.getElementById("name").innerHTML = meter.volume.toFixed(3);
-
-  if (meter.volume > 0.008) {
-    frame = Math.floor(Math.random() * 8);
-    document.getElementById("avatar").className = "avatar_talk_" + frame;
-  } else {
-    if (Math.random() > 0.95) {
-      document.getElementById("avatar").className = "avatar_blink";
-    } else {
-      document.getElementById("avatar").className = "avatar_default";
-    }
-  }
-
     if(isMicOn) {
-        setTimeout(
-            function () {
-            update();
-            }, 100, false);
+      var h1 = Math.min(8, meter.volume * 120 + 2);
+      var y1 = 12 - h1 / 2;
+    
+      var h2 = Math.min(12, meter.volume * 180 + 2);
+      var y2 = 12 - h2 / 2;
+    
+      var h3 = Math.min(8, meter.volume * 120 + 2);
+      var y3 = 12 - h3 / 2;
+    
+      document.getElementById("equalizer").innerHTML = `<svg fill="#444">
+        <rect x="6" y="${y1}" width="2" height="${h1}" rx="1"></rect>
+        <rect x="11" y="${y2}" width="2" height="${h2}" rx="1"></rect>
+        <rect x="16" y="${y3}" width="2" height="${h3}" rx="1"></rect>
+      </svg>`;
+    
+      document.getElementById("name").innerHTML = meter.volume.toFixed(3);
+    
+      if (meter.volume > 0.008) {
+        frame = Math.floor(Math.random() * 8);
+        document.getElementById("avatar").className = "avatar_talk_" + frame;
+      } else {
+        if (Math.random() > 0.97) {
+          document.getElementById("avatar").className = "avatar_blink";
+        } else {
+          document.getElementById("avatar").className = "avatar_default";
+        }
+      }
     } else {
-        document.getElementById("avatar").className = "avatar_blink";
+        if (Math.random() > 0.97) {
+          document.getElementById("avatar").className = "avatar_blink";
+        } else {
+          document.getElementById("avatar").className = "avatar_default";
+        }
         document.getElementById("name").innerHTML = "Mic Off";
         document.getElementById("equalizer").innerHTML = `<svg fill="#444">
             <rect x="6" y="11" width="2" height="1" rx="1"></rect>
@@ -137,9 +138,10 @@ function update(time) {
             <rect x="16" y="11" width="2" height="1" rx="1"></rect>
         </svg>`;
         // delete(audioContext);
-        audioContext.close();
+        // audioContext.close();
     }
-  
+    
+    setTimeout(update, 100, false);
 }
 
 // FIX FOR CHROME
