@@ -239,7 +239,7 @@ article > header > * {
 
 iframe {
   width: 100%;
-  height: 20em;
+  height: 28em;
   animation: fadein 1s;
   overflow: hidden;
   border-radius: 0.5em;
@@ -323,4 +323,19 @@ button {
 button:hover {
   background: var(--whale-body);
   color: var(--whale-background);
+}
+
+
+/*
+
+Trash CSS to make the markdown stuff pretty while debugging
+
+*/
+
+ul {
+  list-style-type: none;
+}
+
+input[type=checkbox] {
+  margin-right: 1em;
 }
