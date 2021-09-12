@@ -1,9 +1,7 @@
 ---
 layout: work
 title: "Various Apple Icons"
-header: "For, you see, so many out-of-the-way things had happened lately."
-date: 2009-08-01
-frameUrl: apple
+frameUrl: apple_icons
 ---
 _The Wonderful Wizard of Oz_ is the classic American children’s novel about the adventures of Dorothy, a young girl who along with her dog Toto is swept away by a cyclone to the magical Land of Oz. It was written by L. Frank Baum and published in May 1900.
 
