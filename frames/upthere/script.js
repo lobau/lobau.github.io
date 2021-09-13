@@ -20,12 +20,13 @@ window.onload = function () {
 
   var context = el.getContext("2d");
   var globalZ = 500; // this is the light. 0 is touching the surface
-  var grainIntensity = 0.1; // intensity of the noise / grain
+  var grainIntensity = 0.12; // intensity of the noise / grain
   var scale = el.height / 60;
 
+  // var scaleRatio = 2;
   var width = el.width;
   var height = el.height;
-  var middleX = width / 4;
+  var middleX = width / 2;
   var middleY = height / 2;
 
   var imageData = context.createImageData(width, height);
@@ -43,7 +44,7 @@ window.onload = function () {
         // var intensity = intensityMap[i];
     
         var color1 = [249, 227, 117];
-        var color2 = [240, 78, 132];
+        var color2 = [240, 78, 250];
     
         var r = color1[2] * intensity + color2[2] * (1 - intensity);
         var g = color1[1] * intensity + color2[1] * (1 - intensity) - (1 / (intensity * 4)) * 100;
@@ -102,12 +103,12 @@ window.onload = function () {
   window.requestAnimationFrame(updateLight);
 
   function updateLight(timestamp) {
-    angle += 0.02;
+    angle += 0.01;
     lightX = Math.cos(angle) * width / 4 + middleX;
     lightY = Math.sin(angle) * width / 4 + middleY;
 
-    // lightDistance += 0.2;
-    light = { x: lightX, y: lightY, z: globalZ + Math.sin(lightDistance) * 300 };
+    lightDistance += 0.01;
+    light = { x: lightX, y: lightY, z: globalZ + Math.sin(lightDistance) * 300 + 200 };
     loadImage();
 
     window.requestAnimationFrame(updateLight);
@@ -158,7 +159,7 @@ window.onload = function () {
   function loadImage() {
     clean_canvas();
     applyLightOnEverything();
-    doAllVect();
+    // doAllVect();
     paint_canvas();
     context.putImageData(imageData, 0, 0);
   }

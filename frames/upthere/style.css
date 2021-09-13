@@ -3,16 +3,56 @@
 	margin: 0;
 }
 
+:root {
+	--shadow-normal: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.05))
+	  drop-shadow(0px 8px 24px rgba(0, 0, 0, 0));
+	--shadow-large: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.05))
+	  drop-shadow(0px 8px 24px rgba(0, 0, 0, 0.08));
+  }
+
 html, body {
 	background: aliceblue;
 	overflow: hidden;
 }
 
-h1 {
+#upshot {
+	left: 2em;
+	top: 2em;
+	bottom: 20px;
+	height: 24em;
 	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translateX(-50%) translateY(-50%);
-	font-family: "Cantarell";
-	color: steelblue;
+	filter: var(--shadow-large);
+	border-radius: 8px;
+	overflow: hidden;
+	/* background-color: red; */
+}
+
+#upthere {
+	top: 2em;
+	left: 30%;
+	width: 716px;
+	height: 24em;
+	position: absolute;
+	filter: var(--shadow-normal);
+	border-radius: 8px;
+	overflow: hidden;
+	/* background-color: red; */
+}
+
+@media only screen and (max-width: 48em) {
+	#upshot {
+		left: 1em;
+		top: 9em;
+		/* bottom: 2em; */
+		height: 18em;
+		position: absolute;
+	}
+	
+	#upthere {
+		top: 1em;
+		left: 19%;
+		height: 18em;
+		width: 536px;
+		position: absolute;
+	}
 }

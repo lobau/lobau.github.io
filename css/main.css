@@ -243,7 +243,7 @@ iframe {
   margin-left: -20px;
   animation: fadein 1s;
   overflow: hidden;
-  border-radius: 0.5em;
+  border-radius: 1em;
   margin-bottom: 1em;
 }
 

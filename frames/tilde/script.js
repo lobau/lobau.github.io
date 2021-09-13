@@ -41,7 +41,7 @@ function enablePrototype() {
 
 window.onload = function () {
   var img = document.createElement("img");
-  img.src = "images/Fall_Leaves.jpg";
+  img.src = "images/background.jpg";
   img.onload = changeImage;
 
   document
