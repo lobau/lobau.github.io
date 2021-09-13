@@ -19,9 +19,9 @@ window.onload = function () {
   el.setAttribute("height", window.innerHeight);
 
   var context = el.getContext("2d");
-  var globalZ = 500; // this is the light. 0 is touching the surface
-  var grainIntensity = 0.12; // intensity of the noise / grain
-  var scale = el.height / 60;
+  var globalZ = 2000; // this is the light. 0 is touching the surface
+  var grainIntensity = 0.08; // intensity of the noise / grain
+  var scale = el.height / 70;
 
   // var scaleRatio = 2;
   var width = el.width;
@@ -96,23 +96,23 @@ window.onload = function () {
     }
   }
 
-  var light = { x: middleX * 1.35, y: 200, z: globalZ };
+  var light = { x: middleX - width * 0.3, y: 200, z: globalZ };
   var lightDistance = 0;
   var angle = 0;
 
-  window.requestAnimationFrame(updateLight);
+  // window.requestAnimationFrame(updateLight);
 
-  function updateLight(timestamp) {
-    angle += 0.01;
-    lightX = Math.cos(angle) * width / 4 + middleX;
-    lightY = Math.sin(angle) * width / 4 + middleY;
+  // function updateLight(timestamp) {
+  //   angle += 0.01;
+  //   lightX = Math.cos(angle) * width / 4 + middleX;
+  //   lightY = Math.sin(angle) * width / 4 + middleY;
 
-    lightDistance += 0.01;
-    light = { x: lightX, y: lightY, z: globalZ + Math.sin(lightDistance) * 300 + 200 };
-    loadImage();
+  //   lightDistance += 0.01;
+  //   light = { x: lightX, y: lightY, z: globalZ + Math.sin(lightDistance) * 300 + 200 };
+  //   loadImage();
 
-    window.requestAnimationFrame(updateLight);
-  }
+  //   window.requestAnimationFrame(updateLight);
+  // }
 
   function addLine(p1, p2) {
     var p2p1 = subVect(p1, p2);
@@ -159,7 +159,7 @@ window.onload = function () {
   function loadImage() {
     clean_canvas();
     applyLightOnEverything();
-    // doAllVect();
+    doAllVect();
     paint_canvas();
     context.putImageData(imageData, 0, 0);
   }

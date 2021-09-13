@@ -11,24 +11,27 @@
   }
 
 html, body {
-	background: aliceblue;
+	width: 100%;
+	height: 100%;
+	background: transparent url(canvas.png) center center no-repeat;
+	background-size: cover;
 	overflow: hidden;
 }
 
 #upshot {
 	left: 2em;
-	top: 2em;
+	top: -1em;
 	bottom: 20px;
 	height: 24em;
 	position: absolute;
-	filter: var(--shadow-large);
+	filter: var(--shadow-normal);
 	border-radius: 8px;
 	overflow: hidden;
 	/* background-color: red; */
 }
 
 #upthere {
-	top: 2em;
+	top: 5em;
 	left: 30%;
 	width: 716px;
 	height: 24em;
@@ -37,6 +40,30 @@ html, body {
 	border-radius: 8px;
 	overflow: hidden;
 	/* background-color: red; */
+}
+
+#icon_upshot {
+	position: absolute;
+	left: 7em;
+	top: 21em;
+	width: 64px;
+	height: 64px;
+	background: transparent url("icon_upshot.png") 0 0 no-repeat;
+	background-size: 100% 100%;
+	filter: var(--shadow-large);
+	overflow: hidden;
+}
+
+#icon_home {
+	position: absolute;
+	left: 40em;
+	top: 3em;
+	width: 64px;
+	height: 64px;
+	background: transparent url("icon_home.png") 0 0 no-repeat;
+	background-size: 100% 100%;
+	filter: var(--shadow-large);
+	overflow: hidden;
 }
 
 @media only screen and (max-width: 48em) {
@@ -54,5 +81,21 @@ html, body {
 		height: 18em;
 		width: 536px;
 		position: absolute;
+	}
+
+	#icon_upshot {
+		left: auto;
+		right: 9em;
+		top: 21em;
+		width: 80px;
+		height: 80px;
+	}
+	
+	#icon_home {
+		left: auto;
+		right: 2em;
+		top: 21em;
+		width: 80px;
+		height: 80px;
 	}
 }
