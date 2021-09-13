@@ -63,7 +63,7 @@
 :root.light {
   --color-background: white;
   --color-text: dimgray;
-  --color-text-secondary: lightgray;
+  --color-text-secondary: darkgray;
   --color-faint: gainsboro;
 
   /* --whale-background: Lavender;
@@ -125,7 +125,7 @@
 
 @media only screen and (min-width: 72em) {
   div {
-    columns: auto 3;
+    columns: auto 2;
     column-gap: 40px;
     column-rule: 1px dotted var(--color-faint);
   }
@@ -206,27 +206,39 @@ h1 {
 h2 {
   font-size: 1.5em;
   font-weight: 700;
+  display: inline-block;
+  margin-right: .25em;
 }
 
 time {
+  display: inline-block;
   font-size: 1.5em;
   font-weight: 300;
-  text-align: right;
+  /* text-align: right; */
   color: var(--color-text-secondary);
 }
 
 p {
-  margin-bottom: 1.6em;
-  line-height: 1.6em;
+  margin-bottom: 28px;
+  line-height: 28px;
 }
 
 article {
+  display: grid;
+  grid-template-columns: 25% auto;
+  grid-column-gap: 40px;
   margin-bottom: var(--section-spacing);
 }
 
-article > header {
+aside {
+  line-height: 28px;
+  font-size: 1em;
+  margin-top: 28px;
+  color: var(--color-text-secondary);
+}
+
+/* article > header {
   display: grid;
-  /* flex-flow: row wrap; */
   grid-template-columns: auto 3em;
   grid-column-gap: 20px;
   grid-row-gap: 20px;
@@ -235,7 +247,7 @@ article > header {
 
 article > header > * {
   flex: 1 auto;
-}
+} */
 
 iframe {
   width: calc(100% + 40px);
@@ -264,6 +276,7 @@ p > a, p > a:link, p > a:visited {
   padding: 0em 0.2em;
   text-decoration:none;
   color: var(--whale-eye);
+  /* color: inherit; */
   white-space: nowrap;
   border-radius: .25em;
   overflow: hidden;

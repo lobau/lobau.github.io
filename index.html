@@ -18,12 +18,13 @@ ogImage: TODO
 
 <section>
 	{% for post in site.categories.portfolio %}
+	<iframe src="/frames/{{ post.frameUrl }}/index.html"></iframe>
 	<article>
 		<header>
 			<h2>{{ post.title }}</h2>
 			<time>{{ post.date | date: "%Y" }}</time>
+			<aside>{{ post.aside | markdownify }}</aside>
 		</header>
-		<iframe src="/frames/{{ post.frameUrl }}/index.html"></iframe>
 		<div>
 			{{ post.content }}
 		</div>
