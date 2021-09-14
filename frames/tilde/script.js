@@ -176,7 +176,7 @@ function dragElement(elmnt) {
     document.onmousemove = elementDrag;
 
     elmnt.style.filter = "var(--shadow-large)";
-    elmnt.style.transform = "scale(1.05)";
+    elmnt.style.transform = "scale(0.9)";
   }
 
   function elementDrag(e) {
@@ -197,7 +197,7 @@ function dragElement(elmnt) {
     document.onmouseup = null;
     document.onmousemove = null;
     elmnt.style.filter = "var(--shadow-normal)";
-    elmnt.style.transform = "scale(1)";
+    elmnt.style.transform = "scale(0.8)";
   }
 }
 

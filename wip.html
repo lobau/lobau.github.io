@@ -17,7 +17,7 @@ ogImage: TODO
 </header>
 
 <section>
-	{% for post in site.categories.portfolio %}
+	{% for post in site.posts %}
 	<iframe src="/frames/{{ post.frameUrl }}/index.html"></iframe>
 	<article>
 		<header>
@@ -31,3 +31,5 @@ ogImage: TODO
 	</article>
 	{% endfor %}
 </section>
+
+{% include footer.html %}

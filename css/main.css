@@ -60,6 +60,9 @@
   --main-width: 64em;
 
   --font-stack: "Hauora", sans-serif;
+  --font-weight-light: 300;
+  --font-weight-regular: 500;
+  --font-weight-bold: 700;
 }
 
 :root.light {
@@ -168,7 +171,7 @@
 body {
     padding: 0em 2em;
     font-family: var(--font-stack);
-    font-weight: 500;
+    font-weight: var(--font-weight-regular);
     color: var(--color-text);
     background-color: var(--color-background);
 }
@@ -207,7 +210,7 @@ h1 {
 
 h2 {
   font-size: 1.5em;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   display: inline-block;
   margin-right: .25em;
 }
@@ -215,7 +218,7 @@ h2 {
 time {
   display: inline-block;
   font-size: 1.5em;
-  font-weight: 300;
+  font-weight: var(--font-weight-light);
   /* text-align: right; */
   color: var(--color-text-secondary);
 }
@@ -283,7 +286,7 @@ p > a, p > a:link, p > a:visited {
   border-radius: .25em;
   overflow: hidden;
   /* transition: all .25s ease; */
-  font-weight: 500;
+  font-weight: var(--font-weight-regular);
 }
 
 /* p > a:hover {
@@ -330,7 +333,7 @@ button {
   overflow: hidden;
   font-family: var(--font-stack);
   font-size: 1em;
-  font-weight: 500;
+  font-weight: var(--font-weight-regular);
   margin-bottom: 1em;
   margin-right: 0.4em;
   /* transition: background .25s ease, color .25s ease; */

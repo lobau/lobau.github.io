@@ -40,14 +40,14 @@
   --typeface-bold: Silka-Demibold, "Helvetica", sans-serif;
 }
 
-@media only screen and (max-width: 48em) {
+/* @media only screen and (max-width: 48em) {
 	#container {
 		transform: scale(0.8);
   		transform-origin: 0 0;
 		height: 125%!important;
 		width: 125%!important;
 	}
-}
+} */
 
 * {
   margin: 0;
@@ -119,6 +119,7 @@ body {
 	filter: var(--shadow-normal);
 	transition: filter 0.3s ease,
 	  transform 0.2s cubic-bezier(0.25, 0.4, 0.55, 1.4);
+    transform: scale(0.8);
 }
 
 #bubbleBackground {
