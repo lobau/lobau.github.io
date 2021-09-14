@@ -10,7 +10,24 @@ ogImage: TODO
 	<h1>Laurent Baumann</h1>
 	<p>I am currently the cofounder and head of product at <a target="_blank" href="https://tilde.so">Tilde</a>.</p>
 	<p>Since 2006, I helped companies such as Sophiestication, Bohemian Coding, Upthere, Apple, Sandisk, and more to build products used by millions.</p>
+	<p>On this website, I try to showcase some interactive elements or a little bit of the process. There will always be a link if you want to see the final product.</p>
 	<a target="_blank" href="https://twitter.com/lobau"><button>Twitter</button></a>
 	<a target="_blank" href="https://dribbble.com/lobau"><button>Dribbble</button></a>
 	<a target="_blank" href="https://www.linkedin.com/in/laurentbaumann/"><button>Linkedin</button></a>
 </header>
+
+<section>
+	{% for post in site.categories.portfolio %}
+	<iframe src="/frames/{{ post.frameUrl }}/index.html"></iframe>
+	<article>
+		<header>
+			<h2>{{ post.title }}</h2>
+			<time>{{ post.date | date: "%Y" }}</time>
+			<aside>{{ post.aside | markdownify }}</aside>
+		</header>
+		<div>
+			{{ post.content }}
+		</div>
+	</article>
+	{% endfor %}
+</section>

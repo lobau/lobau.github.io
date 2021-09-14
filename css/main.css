@@ -58,6 +58,8 @@
   --section-spacing: 6em;
   --header-width: 36em;
   --main-width: 64em;
+
+  --font-stack: "Hauora", sans-serif;
 }
 
 :root.light {
@@ -165,7 +167,7 @@
 
 body {
     padding: 0em 2em;
-    font-family: "Hauora", sans-serif;
+    font-family: var(--font-stack);
     font-weight: 500;
     color: var(--color-text);
     background-color: var(--color-background);
@@ -326,12 +328,12 @@ button {
   white-space: nowrap;
   border-radius: .25em;
   overflow: hidden;
+  font-family: var(--font-stack);
   font-size: 1em;
   font-weight: 500;
   margin-bottom: 1em;
   margin-right: 0.4em;
   /* transition: background .25s ease, color .25s ease; */
-  font-weight: 500;
 }
 
 button:hover {
