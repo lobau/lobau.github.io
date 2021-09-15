@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: 'Hauora';
   src: url(/css/fonts/Hauora-ExtraLight.ttf) format('truetype'),
         url(/css/fonts/Hauora-ExtraLight.woff2) format('woff2'),
@@ -52,6 +52,16 @@
         url(/css/fonts/Hauora-ExtraBold.woff2) format('woff2'),
         url(/css/fonts/Hauora-ExtraBold.woff) format('woff');
   font-weight: 800;
+} */
+
+@font-face {
+  font-family: 'Hauora';
+  src: url(/css/fonts/HauoraGX.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Hepta Slab';
+  src: url(/css/fonts/HeptaSlab-VF.ttf) format('truetype');
 }
 
 :root {
@@ -60,6 +70,8 @@
   --main-width: 64em;
 
   --font-stack: "Hauora", sans-serif;
+  --font-display: "Hepta Slab", sans-serif;
+
   --font-weight-light: 300;
   --font-weight-regular: 500;
   --font-weight-bold: 700;
@@ -204,28 +216,44 @@ section {
 }
 
 h1 {
+  font-family: var(--font-display);
+  font-weight: 550;
+  font-variation-settings: 'wght' 550;
   font-size: 1.8em;
   margin-bottom: 1em;
 }
 
 h2 {
+  font-family: var(--font-display);
   font-size: 1.5em;
-  font-weight: var(--font-weight-bold);
+  /* font-weight: var(--font-weight-bold); */
+  font-weight: 550;
+  font-variation-settings: 'wght' 550;
   display: inline-block;
   margin-right: .25em;
 }
 
 time {
+  font-family: var(--font-display);
   display: inline-block;
   font-size: 1.5em;
-  font-weight: var(--font-weight-light);
+  /* font-weight: var(--font-weight-light); */
+  font-weight: 300;
+  font-variation-settings: 'wght' 300;
   /* text-align: right; */
   color: var(--color-text-secondary);
 }
 
 p {
+  font-weight: 400;
+  font-variation-settings: 'wght' 400;
   margin-bottom: 28px;
   line-height: 28px;
+}
+
+strong {
+  font-weight: 550;
+  font-variation-settings: 'wght' 550;
 }
 
 article {
@@ -236,8 +264,12 @@ article {
 }
 
 aside {
+  font-family: var(--font-display);
+  font-weight: 550;
+  font-variation-settings: 'wght' 550;
+
   line-height: 28px;
-  font-size: 1em;
+  font-size: 17px;
   margin-top: 28px;
   color: var(--color-text-secondary);
 }
@@ -262,6 +294,7 @@ iframe {
   overflow: hidden;
   border-radius: 1em;
   margin-bottom: 1em;
+  /* touch-action: auto; */
 }
 
 @keyframes fadein {
@@ -280,18 +313,20 @@ p > a, p > a:link, p > a:visited {
   position:relative;
   padding: 0em 0.2em;
   text-decoration:none;
-  color: var(--whale-eye);
-  /* color: inherit; */
+  /* color: var(--whale-eye); */
+  color: inherit;
   white-space: nowrap;
   border-radius: .25em;
   overflow: hidden;
   /* transition: all .25s ease; */
-  font-weight: var(--font-weight-regular);
+  /* font-weight: var(--font-weight-regular); */
+  font-weight: 550;
+  font-variation-settings: 'wght' 550;
 }
 
-/* p > a:hover {
-  color: var(--whale-background);
-} */
+p > a:hover {
+  color: var(--whale-eye);
+}
 
 p > a:focus {
   outline: 1px dashed var(--whale-belly);
@@ -333,7 +368,9 @@ button {
   overflow: hidden;
   font-family: var(--font-stack);
   font-size: 1em;
-  font-weight: var(--font-weight-regular);
+  /* font-weight: var(--font-weight-regular); */
+  font-weight: 550;
+  font-variation-settings: 'wght' 550;
   margin-bottom: 1em;
   margin-right: 0.4em;
   /* transition: background .25s ease, color .25s ease; */
