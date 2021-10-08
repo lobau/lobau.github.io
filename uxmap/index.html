@@ -2,19 +2,78 @@
   <head>
     <meta charset="utf-8" />
     <title>UX Map</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">     <link type="text/css" rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link type="text/css" rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script type="text/javascript" src="script.js"></script>
   </head>
   <body>
     <main>
-        <div class="markdown">
-            <textarea id="editing" spellcheck="false"></textarea>
-        </div>
-        <div id="render_preview"></div>
+      <div class="markdown">
+        <nav>
+          <a href="javascript:showHelp()" class="toolbar">Show Help</a>
+          <a id="download_button" class="toolbar">Download</a>
+          <div id="upload_button" class="toolbar file_upload">
+            <span>Upload</span>
+            <input id="upload_markdown" type="file" class="upload" />
+          </div>
+          
+        </nav>
+        <textarea id="editing" spellcheck="false"></textarea>
+      </div>
+      <div id="render_preview"></div>
     </main>
+    <div id="help">
+      <a href="javascript:hideHelp()" class="toolbar">Close</a>
+      <div class="help_content">
+        <div>
+          <h3>About UX Map</h3>
+          <p>
+            UX Map is a simple tool allowing anybody with some markdown knowledge to quickly draft and test UX flows.
+          </p>
+          <p>
+            In UX Map, you define each state of your user journey. Any time a user is faced with a new set of actions, this is a new state. For example, a new page the user visit is a new state, but opening a popover is also a new state, since it offers new affordances, alongside a way to close the popover.
+          </p>
+        </div>
+        <div>
+          <h3>Saving & Export</h3>
+          <p>Any change you make to the markup is instantly saved locally in your browser local storage, even between sessions. Nothing is stored on the server. You can also download the markup as a .md file, and upload files using the toolbar buttons.</p>
+        </div>
+        <div>
+          <h3>Create a new state</h3>
+          <p>
+            To create a new state, enter a new line, followed by / and a unique tag (no space, no special characters)
+            <pre>/state_tag
+  # The big title
+  A short description
+  
+  /another_state
+  # Another state
+  A short description
+  </pre>
+          </p>
+        </div>
+        <div>
+          <h3>Link states</h3>
+          <p>To link states, just name a state, and in a button of another state, write the same name.</p>
+          <pre>/state_a
+  # First State
+  [Button](#state_b)
+  
+  /state_b
+  # Second State
+  [Button](#state_a)</pre>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

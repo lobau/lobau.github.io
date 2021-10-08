@@ -59,7 +59,25 @@ const render = () => {
         `;
   }
 
+  set_download();
   localStorage.saveData = uxdatafield;
+};
+
+const showHelp = () => {
+  $("help").style.top = "50%";
+  $("help").style.transform = "translateX(-50%) translateY(-50%)";
+};
+
+const hideHelp = () => {
+  $("help").style.top = "calc(0% - 2px)";
+  $("help").style.transform = "translateX(-50%) translateY(-100%)";
+};
+
+const set_download = () => {
+  let docData = $("editing").value;
+  let dataStr = "data:text/plain;charset=utf-8," + encodeURIComponent(docData);
+  $("download_button").setAttribute("href", dataStr);
+  $("download_button").setAttribute("download", "markup.md");
 };
 
 window.addEventListener("popstate", function () {
@@ -69,39 +87,71 @@ window.addEventListener("popstate", function () {
 window.onload = () => {
   window.currentRoute = "root";
 
-//   if (localStorage.saveData !== undefined) {
-//     $("editing").innerHTML = localStorage.saveData;
-//   } else {
+  if (localStorage.saveData !== undefined) {
+    $("editing").innerHTML = localStorage.saveData;
+  } else {
     $("editing").innerHTML = `/root
-# UX Map
-UX Map is a simple tool allowing _anybody with some markdown knowledge_ to quickly draft and test UX flows.
-Try it now! Just edit this sentence in the editor!
-[What's a state?](#state)
-[But what is it exactly?](#but_what)
-[Learn more about markdown](#markdown)
+# Welcome Screen
+Welcome to my app!
+[Sign up with Email](#email)
+[Sign up with Google](#google)
 
-/state
-# What are states?
-Any time a user is faced with a new set of actions, this is a new state.
-- When the user visit a new page or screen
-- When the user open a popover or a menu
-- When the set of possible actions changes  
-[Got it](#root)
+/email
+# Sign in with Email
+|Data entry|
+|---|
+|Name field|
+|Email field|
+---
+[Fill information](#email_filled)
+[Cancel](#root)
 
-/but_what
-# But what is it exactly?
-If you look on the left hand-side, you will see markdown code.  
-You can easily add new _pages_, or _states_ by creating a new block starting with "/" followed by a unique name, and link blocks together using their unique #name
-[Sounds great](#root)
+/email_filled
+# Sign in with email
+|Data entry|
+|---|
+|Dorothy Gale|
+|dorothy @ emerald.so|
+---
+[Submit information](#success)
+[Cancel](#root)
 
-/markdown
-# Markdown Cheatsheet
-**Markdown** is a lightweight way to add _formatting elements_ to plaintext text documents like this one. Look in the left-hand side to see how is the styling applied to this text.
-[Back](#root)`;
-//   }
+/google
+# Sign up with google
+List of your google accounts
+[dorothy@emerald.so](#success)
+[dorothy@with.so](#success)
+[Cancel](#root)
+
+/success
+# Welcome back, Dorothy!
+You are now logged in and you do whatever you want!
+[Sign out](#root)`;
+  }
 
   $("editing").addEventListener("input", function (event) {
     render();
+  });
+
+  $("upload_markdown").addEventListener("change", function (event) {
+    if (this.files && this.files[0]) {
+      var reader = new FileReader();
+      reader.readAsText(event.target.files[0]);
+      reader.onload = function (event) {
+        var file_data = event.target.result;
+        $("editing").value = file_data;
+
+        $("upload_button").classList.remove("flash");
+
+        setTimeout(function () {
+          $("upload_button").classList.add("flash");
+        }, 1);
+
+        // console.log(file_data);
+        // setJson(file_json);
+        render();
+      };
+    }
   });
 
   render();

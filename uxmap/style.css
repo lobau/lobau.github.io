@@ -12,13 +12,24 @@ html,
 body {
   background: #eee;
   font-size: 18px;
+  overflow: hidden;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-start;
+  height: 1.5rem;
+  padding: 1rem;
+  background-color: white;
+  z-index: 999;
 }
 
 main {
   display: grid;
   grid-template-columns: auto calc(400px + 12rem);
   width: 100%;
-  /* height: 100%; */
+  height: calc(100vh);
+  z-index: -1;
 }
 
 .markdown {
@@ -28,22 +39,26 @@ main {
 }
 
 .markdown textarea {
-  height: 100vh;
+  height: 100%;
   width: 100%;
-  background-color: #444;
-  color: #fff;
+  background-color: #fff;
+  color: #333;
   padding: 1rem 2rem 1rem 1rem;
   font-size: 20px;
   font-family: "Courier Prime", monospace;
 }
 
+textarea:focus {
+  outline: none;
+}
+
 #render_preview {
-    padding: 3rem 4rem;
+  padding: 3rem 4rem;
 }
 
 .route_name {
-    padding: 0.5rem 0rem;
-    font-family: "Courier Prime", monospace;
+  padding: 0.5rem 0rem;
+  font-family: "Courier Prime", monospace;
 }
 
 .card {
@@ -57,6 +72,7 @@ main {
 
 .error {
   background-color: #ffeb7a;
+  box-shadow: inset 0px 0px 0px 2px rgb(170, 144, 0);
 }
 
 h1,
@@ -72,7 +88,10 @@ table,
 thead,
 tbody,
 tr,
-td {
+td,
+label,
+span,
+div {
   font-family: var(--font-stack);
 }
 
@@ -97,12 +116,6 @@ h6 {
   font-weight: 600;
 }
 
-/* h2,
-h3,
-p {
-  margin-top: 1rem;
-} */
-
 hr {
   border-top: 2px dotted #999;
 }
@@ -116,10 +129,13 @@ p {
   /* outline: 1px solid red; */
 }
 
-/* pre {
+pre {
   display: block;
-  margin: 1rem 0 1rem 0;
-} */
+  margin: 1rem 0 0 0;
+  background: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
 
 ul {
   margin-bottom: 1rem;
@@ -147,7 +163,6 @@ a:link,
 a:visited {
   display: block;
   margin: 1rem 0 1rem 0;
-  display: block;
   align-items: center;
   justify-content: center;
   padding: 0.65rem;
@@ -176,4 +191,100 @@ a:active {
 a:focus {
   background-color: white;
   box-shadow: inset 0 0 0 2px black;
+}
+
+.toolbar,
+.toolbar:link,
+.toolbar:visited {
+  display: inline;
+  margin: 0;
+  padding: 0 1rem;
+  background: white;
+  color: #000;
+  font-weight: 400;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 15px;
+  outline: 2px solid rgba(0, 0, 0, 0.15);
+  box-shadow: none;
+  margin-right: 1rem;
+}
+
+#help {
+  max-width: 800px;
+  width: calc(100% - 8rem);
+  position: absolute;
+
+
+  position: absolute;
+  background: #ffeb7a;
+  outline: 2px solid rgb(170, 144, 0);
+
+
+  left: 50%;
+
+  /* open */
+  /* top: 50%;
+  transform: translateX(-50%) translateY(-50%); */
+
+  /* closed */
+  top: calc(0% - 2px);
+  transform: translateX(-50%) translateY(-100%);
+
+  transition: top 0.35s ease-in-out, transform 0.35s ease-in-out;
+  z-index: 999;
+
+  /* height: 15rem; */
+  padding: 2rem;
+  border-radius: 8px;
+
+  font-size: 0.9rem;
+}
+
+.help_content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 3rem;
+  grid-row-gap: 3rem;
+
+  margin-top: 2rem;
+}
+
+.file_upload {
+  position: relative;
+    overflow: hidden;
+}
+
+#upload_markdown {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+.flash {
+  -webkit-animation-name: flash;
+  animation-name: flash;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+
+@keyframes flash {
+  0% {
+    background: #ffeb7a;
+    outline: 2px solid rgb(170, 144, 0);
+  }
+  50% {
+    background: #ffeb7a;
+    outline: 2px solid rgb(170, 144, 0);
+  }
+  100% {
+    background: #fff;
+    outline: 2px solid rgba(0, 0, 0, 0.15);
+  }
 }
