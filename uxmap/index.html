@@ -2,44 +2,19 @@
   <head>
     <meta charset="utf-8" />
     <title>UX Map</title>
-    <link type="text/css" rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">     <link type="text/css" rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet"> 
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script type="text/javascript" src="script.js"></script>
   </head>
   <body>
     <main>
         <div class="markdown">
-            <textarea id="markdown_code" spellcheck="false">
-/root
-# UX Map
-UX Map is a very simple tool, that allows anybody with little markdown knowledge to make quick UX maps.
-[But what is it exactly?](#but_what)
-[Learn more about markdown](#markdown)
-
-/but_what
-# But what is it exactly?
-If you look on the left hand-side, you will see markdown code.  
-You can easily add new _pages_, or _states_ by creating a new block starting with "/" followed by a unique name, and link blocks together using their unique #name
-[Sounds great](#root)
-
-/markdown
-# Markdown
-```
-# header
-## header
-### header
-**bold**
-_italic_
-[Link name](#page)
-- bullets
---- horizontal line
-```
-[Back](#root)
-            </textarea>
+            <textarea id="editing" spellcheck="false"></textarea>
         </div>
-        <div id="render_preview">
-            render
-        </div>
+        <div id="render_preview"></div>
     </main>
   </body>
 </html>
