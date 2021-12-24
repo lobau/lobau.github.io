@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Hauora';
-    src: url(HauoraGX.ttf) format('truetype');
+    src: url(resources/HauoraGX.ttf) format('truetype');
 }
 
 * {
@@ -27,7 +27,7 @@ h1 {
 }
 
 header {
-    padding: 120px 80px 0px 80px;
+    padding: 120px 40px 0px 40px;
     text-align: left;
     margin-bottom: 50px;
     max-width: 500px;
