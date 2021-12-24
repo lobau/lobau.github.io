@@ -7,6 +7,6 @@
     "description": "Lasagna landing page",
     "scripts": {
         "serve": "npx @11ty/eleventy --serve --input=src --output=dist",
-        "build": "npx @11ty/eleventy --input=src --output=dist"
+        "build": "npx @11ty/eleventy --input=src --output=dist --pathprefix='/'"
     }
 }
