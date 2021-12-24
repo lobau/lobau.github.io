@@ -1,3 +1,0 @@
-Sitemap: http://lobau.io/sitemap.xml
-User-agent: *
-Disallow:

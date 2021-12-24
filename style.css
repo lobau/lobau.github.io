@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Hauora';
-    src: url(/css/fonts/HauoraGX.ttf) format('truetype');
+    src: url(HauoraGX.ttf) format('truetype');
 }
 
 * {
