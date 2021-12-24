@@ -1,0 +1,334 @@
+@font-face {
+  font-family: Silka;
+  src: url(fonts/Silka-Regular.otf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Silka-DemiBold;
+  src: url(fonts/Silka-DemiBold.otf);
+  font-weight: 600;
+}
+
+:root {
+  --accent-ink: transparent;
+  --accent-bold: transparent;
+  --accent-regular: transparent;
+  --accent-light: transparent;
+  --accent-surface: transparent;
+
+  --slate-ink: #949cba;
+  --slate-bold: #bec3d7;
+  --slate-regular: #e2e5ee;
+  --slate-surface: #f4f5f8;
+
+  --surface: #fff;
+  --ink: #444;
+
+  --box-shadow: 0px 45px 89px rgba(0, 0, 0, 0.0185187),
+    0px 14.27px 26.8309px rgba(0, 0, 0, 0.0225848),
+    0px 6.11599px 11.1442px rgba(0, 0, 0, 0.0264039),
+    0px 2.11191px 4.03063px rgba(0, 0, 0, 0.04);
+  --border-radius: 4px;
+
+  --shadow-normal: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.05))
+    drop-shadow(0px 8px 24px rgba(0, 0, 0, 0));
+  --shadow-large: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.05))
+    drop-shadow(0px 8px 24px rgba(0, 0, 0, 0.08));
+
+  --typeface: Silka, "Helvetica", sans-serif;
+  --typeface-bold: Silka-Demibold, "Helvetica", sans-serif;
+}
+
+/* @media only screen and (max-width: 48em) {
+	#container {
+		transform: scale(0.8);
+  		transform-origin: 0 0;
+		height: 125%!important;
+		width: 125%!important;
+	}
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+html,
+body {
+	padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    /* overflow: hidden; */
+}
+
+#bottomBar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding: 4px;
+	/* height: 48px; */
+	background-color: #444;
+	width: 100%;
+}
+
+.protoButton {
+	font-family: monospace;
+  font-size: 12px;
+  text-transform: uppercase;
+	/* padding: 4px 8px; */
+	color: white;
+	padding: 8px 12px;
+	/* background-color: #555; */
+	/* margin-right: 4px; */
+	/* border-radius: 20px; */
+	text-align: center;
+  cursor: pointer;
+}
+
+#imageInput {
+    display: none;
+}
+
+#floatingButton {
+	display: inline-block;
+	padding: 8px 16px;
+	background: white;
+	border-radius: 8px;
+	filter: var(--shadow-normal);
+	font-size: 16px;
+	font-family: monospace;
+  }
+
+
+#bubble {
+  position: absolute;
+  left: calc(50% - 70px);
+  top: calc(50% - 77px);
+  width: 140px;
+  height: 154px;
+  display: block;
+}
+
+.draggable {
+	filter: var(--shadow-normal);
+	transition: filter 0.3s ease,
+	  transform 0.2s cubic-bezier(0.25, 0.4, 0.55, 1.4);
+    transform: scale(0.8);
+}
+
+#bubbleBackground {
+  position: absolute;
+  left: 0px;
+  top: 14px;
+  width: 140px;
+  height: 140px;
+  background: #fff;
+  border-radius: 70px;
+}
+
+#avatarBackground {
+  position: absolute;
+  left: 5px;
+  top: 20px;
+  width: 130px;
+  height: 90px;
+  border-top-left-radius: 140px;
+  border-top-right-radius: 140px;
+  border-bottom-left-radius: 48px;
+  border-bottom-right-radius: 48px;
+  background: #ffd7c0;
+}
+
+#avatar {
+  position: absolute;
+  left: 5px;
+  top: 0px;
+  width: 130px;
+  height: 110px;
+  background-image: url("images/sprites.png");
+  background-repeat: no-repeat;
+  background-size: 400% 300%;
+}
+
+.avatar_blink {
+  background-position: 0px 0px;
+}
+
+.avatar_default {
+  background-position: -130px 0px;
+}
+
+.avatar_talk_0 {
+  background-position: -260px 0px;
+}
+
+.avatar_talk_1 {
+  background-position: -390px 0px;
+}
+
+.avatar_talk_2 {
+  background-position: 0px -110px;
+}
+
+.avatar_talk_3 {
+  background-position: -130px -110px;
+}
+
+.avatar_talk_4 {
+  background-position: -260px -110px;
+}
+
+.avatar_talk_5 {
+  background-position: -390px -110px;
+}
+
+.avatar_talk_6 {
+  background-position: 0px -220px;
+}
+
+.avatar_talk_7 {
+  background-position: -130px -220px;
+}
+
+/* background color */
+
+#name {
+  position: absolute;
+  left: 5px;
+  top: 112px;
+  width: 130px;
+  height: 30px;
+  font-family: monospace;
+  font-size: 14px;
+  text-align: center;
+}
+
+#equalizer {
+  position: relative;
+  top: 125px;
+  left: 58px;
+  width: 24px;
+  height: 24px;
+}
+
+#container {
+	position: absolute;
+    height: 100%;
+    width: 100%;
+    /* background-color: var(--accent-bold); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: var(--typeface);
+    font-size: 16px;
+    overflow: hidden;
+}
+
+.textPadding {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.marginLeft {
+    margin-left: 8px;
+}
+
+.widget {
+    position: absolute;
+    overflow: hidden;
+    background-color: var(--surface);
+    border-radius: var(--border-radius);
+    /* box-shadow: var(--box-shadow); */
+}
+
+.widgetHeader {
+    padding: 12px 16px;
+    color: var(--accent-ink);
+    background-color: var(--accent-surface);
+    font-family: var(--typeface-bold);
+}
+
+.widgetControls {
+    width: 24px;
+    height: 24px;
+    float: right;
+}
+
+.glyphColor {
+    fill: var(--accent-ink);
+}
+
+.widgetPaddedContent {
+    padding: 12px 16px;
+}
+
+.scrollContent {
+    padding-right: 15px;
+    width: calc(100% - 10px);
+    height: calc(100% - 70px);
+    overflow-y: auto;
+    color: var(--ink);
+}
+
+.placeholderText {
+    color: var(--slate-ink);
+    height: 100px;
+}
+
+button {
+    width: 100%;
+    padding: 12px 16px;
+    font-family: var(--typeface-bold);
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--accent-surface);
+    outline: 0;
+    color: var(--accent-ink);
+    transition: all .3s;
+}
+
+button:hover {
+    background-color: var(--accent-light);
+}
+
+button:active {
+    background-color: var(--accent-light);
+    box-shadow: inset 0 0 0px 2px var(--accent-bold);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--surface);
+    border-radius: 10px;
+    transition: all .3s;
+}
+
+::-webkit-scrollbar-track:hover {
+    background: var(--slate-surface);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent-surface);
+    border-radius: 10px;
+    transition: all .3s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-regular);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: var(--accent-regular);
+    box-shadow: inset 0 0 0px 2px var(--accent-bold);
+}

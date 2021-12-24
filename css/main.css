@@ -1,0 +1,397 @@
+/* @font-face {
+  font-family: 'Hauora';
+  src: url(/css/fonts/Hauora-ExtraLight.ttf) format('truetype'),
+        url(/css/fonts/Hauora-ExtraLight.woff2) format('woff2'),
+        url(/css/fonts/Hauora-ExtraLight.woff) format('woff');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'Hauora';
+  src: url(/css/fonts/Hauora-Light.ttf) format('truetype'),
+        url(/css/fonts/Hauora-Light.woff2) format('woff2'),
+        url(/css/fonts/Hauora-Light.woff) format('woff');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Hauora';
+  src: url(/css/fonts/Hauora-Regular.ttf) format('truetype'),
+        url(/css/fonts/Hauora-Regular.woff2) format('woff2'),
+        url(/css/fonts/Hauora-Regular.woff) format('woff');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Hauora';
+  src: url(/css/fonts/Hauora-Medium.ttf) format('truetype'),
+        url(/css/fonts/Hauora-Medium.woff2) format('woff2'),
+        url(/css/fonts/Hauora-Medium.woff) format('woff');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Hauora';
+  src: url(/css/fonts/Hauora-SemiBold.ttf) format('truetype'),
+        url(/css/fonts/Hauora-SemiBold.woff2) format('woff2'),
+        url(/css/fonts/Hauora-SemiBold.woff) format('woff');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Hauora';
+  src: url(/css/fonts/Hauora-Bold.ttf) format('truetype'),
+        url(/css/fonts/Hauora-Bold.woff2) format('woff2'),
+        url(/css/fonts/Hauora-Bold.woff) format('woff');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Hauora';
+  src: url(/css/fonts/Hauora-ExtraBold.ttf) format('truetype'),
+        url(/css/fonts/Hauora-ExtraBold.woff2) format('woff2'),
+        url(/css/fonts/Hauora-ExtraBold.woff) format('woff');
+  font-weight: 800;
+} */
+
+@font-face {
+  font-family: 'Hauora';
+  src: url(/css/fonts/HauoraGX.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Hepta Slab';
+  src: url(/css/fonts/HeptaSlab-VF.ttf) format('truetype');
+}
+
+:root {
+  --section-spacing: 6em;
+  --header-width: 36em;
+  --main-width: 64em;
+
+  --font-stack: "Hauora", sans-serif;
+  --font-display: "Hepta Slab", sans-serif;
+
+  --font-weight-light: 300;
+  --font-weight-regular: 500;
+  --font-weight-bold: 700;
+}
+
+:root.light {
+  --color-background: white;
+  --color-text: dimgray;
+  --color-text-secondary: darkgray;
+  --color-faint: gainsboro;
+
+  /* --whale-background: Lavender;
+  --whale-body: MediumPurple;
+  --whale-belly: SlateBlue;
+  --whale-eye: Indigo; */
+
+  --whale-background: aliceblue;
+  --whale-body: deepskyblue;
+  --whale-belly: lightskyblue;
+  --whale-eye: darkblue;
+
+  --visible-dark: none;
+  --visible-light: block;
+}
+
+:root.dark {
+  /* --color-background: black; */
+  --color-background: black;
+  --color-text: silver;
+  --color-text-secondary: dimgray;
+  --color-faint: DimGray;
+
+  /* --whale-background: Indigo;
+  --whale-body: MediumPurple;
+  --whale-belly: SlateBlue;
+  --whale-eye: lavender; */
+
+  /* --whale-background: darkslateblue;
+  --whale-body: orchid;
+  --whale-belly: mediumpurple;
+  --whale-eye: aliceblue; */
+
+  --whale-background: darkslateblue;
+  --whale-body: PaleTurquoise;
+  --whale-belly: lightskyblue;
+  --whale-eye: aliceblue;
+
+  --visible-dark: block;
+  --visible-light: none;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: black;
+    --color-text: silver;
+    --color-text-secondary: dimgray;
+    --color-faint: DimGray;
+  
+    --whale-background: Indigo;
+    --whale-body: MediumPurple;
+    --whale-belly: rgb(33, 31, 46);
+    --whale-eye: lavender;
+  
+    --visible-dark: block;
+    --visible-light: none;
+  }
+} */
+
+@media only screen and (min-width: 72em) {
+  div {
+    columns: auto 2;
+    column-gap: 40px;
+    column-rule: 1px dotted var(--color-faint);
+  }
+}
+
+@media only screen and (max-width: 72em) {
+  :root {
+    --section-spacing: 6em;
+    --header-width: 36em;
+    --main-width: 40em;
+  }
+
+  div {
+    columns: auto 2;
+    column-gap: 20px;
+  }
+}
+
+@media only screen and (max-width: 48em) {
+  :root {
+    --section-spacing: 6em;
+    --header-width: 32em;
+    --main-width: 32em;
+  }
+
+  div {
+    columns: auto 1;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  /* outline: 1px solid rgba(255, 0, 0, 0.2); */
+}
+
+body {
+    padding: 0em 2em;
+    font-family: var(--font-stack);
+    font-weight: var(--font-weight-regular);
+    color: var(--color-text);
+    background-color: var(--color-background);
+}
+
+nav {
+  margin-bottom: 2em;
+  /* margin-top: var(--section-spacing);; */
+  /* background-color: red; */
+}
+
+svg {
+  display: block;
+}
+
+main {
+  max-width: var(--main-width);
+  margin: 0 auto;
+  padding: 6em 0 6em 0;
+  /* background-color: blue; */
+}
+
+main > header {
+  max-width: var(--header-width);
+  margin-bottom: var(--section-spacing);
+}
+
+section {
+  max-width: var(--main-width);
+  margin-bottom: var(--section-spacing);
+}
+
+h1 {
+  font-family: var(--font-display);
+  font-weight: 550;
+  font-variation-settings: 'wght' 550;
+  font-size: 1.8em;
+  margin-bottom: 1em;
+}
+
+h2 {
+  font-family: var(--font-display);
+  font-size: 1.5em;
+  /* font-weight: var(--font-weight-bold); */
+  font-weight: 550;
+  font-variation-settings: 'wght' 550;
+  display: inline-block;
+  margin-right: .25em;
+}
+
+time {
+  font-family: var(--font-display);
+  display: inline-block;
+  font-size: 1.5em;
+  /* font-weight: var(--font-weight-light); */
+  font-weight: 300;
+  font-variation-settings: 'wght' 300;
+  /* text-align: right; */
+  color: var(--color-text-secondary);
+}
+
+p {
+  font-weight: 400;
+  font-variation-settings: 'wght' 400;
+  margin-bottom: 28px;
+  line-height: 28px;
+}
+
+strong {
+  font-weight: 550;
+  font-variation-settings: 'wght' 550;
+}
+
+article {
+  display: grid;
+  grid-template-columns: 25% auto;
+  grid-column-gap: 40px;
+  margin-bottom: var(--section-spacing);
+}
+
+aside {
+  font-family: var(--font-display);
+  font-weight: 550;
+  font-variation-settings: 'wght' 550;
+
+  line-height: 28px;
+  font-size: 17px;
+  margin-top: 28px;
+  color: var(--color-text-secondary);
+}
+
+/* article > header {
+  display: grid;
+  grid-template-columns: auto 3em;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  margin-bottom: 1em;
+}
+
+article > header > * {
+  flex: 1 auto;
+} */
+
+iframe {
+  width: calc(100% + 40px);
+  height: 28em;
+  margin-left: -20px;
+  animation: fadein 1s;
+  overflow: hidden;
+  border-radius: 1em;
+  margin-bottom: 1em;
+  /* touch-action: auto; */
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* div {
+  columns: auto 3;
+  column-gap: 40px;
+  column-rule: 1px dotted var(--color-faint);
+} */
+
+p > a, p > a:link, p > a:visited {
+  display:inline;
+  position:relative;
+  padding: 0em 0.2em;
+  text-decoration:none;
+  /* color: var(--whale-eye); */
+  color: inherit;
+  white-space: nowrap;
+  border-radius: .25em;
+  overflow: hidden;
+  /* transition: all .25s ease; */
+  /* font-weight: var(--font-weight-regular); */
+  font-weight: 550;
+  font-variation-settings: 'wght' 550;
+}
+
+p > a:hover {
+  color: var(--whale-eye);
+}
+
+p > a:focus {
+  outline: 1px dashed var(--whale-belly);
+}
+
+p > a:before {
+  transform:scaleY(.1);
+  transform-origin:bottom right
+}
+
+p > a:hover:before {
+  transform:scaleY(1);
+  transform-origin:bottom left;
+  /* background: var(--whale-body); */
+}
+
+p > a:before{
+  content:" ";
+  display:block;
+  position:absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  inset:0 0 0 0;
+  background: var(--whale-background);
+  z-index:-1;
+  transition: transform .25s ease;
+  border-radius: .25em;
+  overflow: hidden;
+}
+
+button {
+  padding: 0.5em 1em;
+  background: var(--whale-background);
+  color: var(--whale-eye);
+  white-space: nowrap;
+  border-radius: .25em;
+  overflow: hidden;
+  font-family: var(--font-stack);
+  font-size: 1em;
+  /* font-weight: var(--font-weight-regular); */
+  font-weight: 550;
+  font-variation-settings: 'wght' 550;
+  margin-bottom: 1em;
+  margin-right: 0.4em;
+  /* transition: background .25s ease, color .25s ease; */
+}
+
+button:hover {
+  background: var(--whale-body);
+  color: var(--whale-background);
+}
+
+
+/*
+
+Trash CSS to make the markdown stuff pretty while debugging
+
+*/
+
+ul {
+  list-style-type: none;
+}
+
+input[type=checkbox] {
+  margin-right: 1em;
+}

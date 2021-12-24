@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link type="text/css" rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="script.js"></script>
+</head>
+
+
+<body>
+    <div id="background"></div>
+    <!-- <div id="contrasteapp"></div> -->
+    <div id="picker">
+        <div id="header">
+            <div id="contrastHeader"></div>
+            <div id="contrastValue"></div>
+            <!-- <div id="close"></div> -->
+        </div>
+        <div id="form">
+            <div class='inputLabel'>Red</div>
+            <input type="range" id='red' min="0" max="255" value="100" class="slider" oninput='update()' />
+            <div id="redValue" class='colorValue'>255</div>
+    
+            <div class='inputLabel'>Green</div>
+            <input type="range" id='green' min="0" max="255" value="100" class="slider" oninput='update()' />
+            <div id="greenValue" class='colorValue'>255</div>
+    
+            <div class='inputLabel'>Blue</div>
+            <input type="range" id='blue' min="0" max="255" value="100" class="slider" oninput='update()' />
+            <div id="blueValue" class='colorValue'>255</div>
+    
+            <!-- <div id="output"></div> -->
+        </div>
+    </div>
+
+    <!-- <div id="icon"></div> -->
+</body>
+
+</html>
