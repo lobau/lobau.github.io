@@ -1,36 +1,45 @@
 @font-face {
-    font-family: 'Hauora';
-    src: url(HauoraGX.ttf) format('truetype');
+    font-family: 'Plus Jakarta';
+    src: url(PlusJakartaSans.ttf) format('truetype');
 }
 
 * {
     padding: 0;
     margin: 0;
     border: none;
-    font-family: "Hauora", system-ui, sans-serif;
-    /* outline: 1px solid rgba(255, 0, 0, 0.5); */
+    font-family: "Plus Jakarta", system-ui, sans-serif;
+    outline: 1px solid rgba(255, 0, 0, 0.5);
 }
 
 :root {
-    --text-color: #444;
-    --accent-color: blue;
+    --rem-size: 16px;
+    --text-color: rgb(56, 52, 42);
+    --padding-large: 80px;
 }
 
-main {
-    min-height: 100vh;
-    min-width: 100vw;
+html,
+body {
+    font-size: var(--rem-size);
+    background-color: #fefefe;
 }
 
 h1 {
-    margin: 10px auto 32px auto;
+    margin: 1rem auto 2rem auto;
+    color: var(--text-color);
+}
+
+h2 {
+    padding: 2rem var(--padding-large);
+    color: var(--text-color);
+}
+
+h3 {
     color: var(--text-color);
 }
 
 header {
-    padding: 120px 40px;
+    padding: var(--padding-large);
     text-align: left;
-    margin-bottom: 50px;
-    max-width: 500px;
     margin: 0 auto;
 }
 
@@ -39,6 +48,7 @@ header>p {
     font-size: 20px;
     line-height: 1.5;
     text-align: left;
+    max-width: 540px;
 }
 
 button {
@@ -60,19 +70,27 @@ button>svg {
     fill: var(--text-color);
 }
 
-section {
+main {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 20px;
-    padding: 0px 80px 80px 80px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 0 var(--padding-large) var(--padding-large) var(--padding-large);
     margin: 0 auto;
 }
 
-article {
-    text-align: center;
-    padding: 40px;
+section {
+    display: block;
     border-radius: 32px;
     overflow: hidden;
+}
+
+article {
+    padding: 40px;
+}
+
+time {
+    display: block;
+    margin-bottom: 20px;
 }
 
 article>p {
@@ -82,22 +100,25 @@ article>p {
     text-align: left;
 }
 
+section>img {
+    display: block;
+    width: 100%;
+}
+
 p {
     margin-bottom: 16px;
 }
 
 a,
 a:link,
-a:visited {
-    display: inline;
-    position: relative;
-    padding: 2px;
+a:visited,
+a:hover,
+a:focus {
     text-decoration: none;
-    color: var(--text-color);
-    font-weight: 700;
-    white-space: nowrap
 }
 
-a:hover {
-    color: #222;
+@media only screen and (max-width: 720px) {
+     :root {
+        --padding-large: 40px;
+    }
 }
