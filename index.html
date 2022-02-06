@@ -8,9 +8,26 @@
 
 	<!-- Stylesheet -->
 	<style type="text/css">
+
+		@font-face {
+			font-family: 'Silka';
+			src: url('fonts/silka-regular.woff2') format('woff2');
+			font-weight: 400;
+			font-style: normal;
+		}
+
+		@font-face {
+			font-family: 'Silka';
+			src: url('fonts/silka-bold.woff2') format('woff2');
+			font-weight: 600;
+			font-style: normal;
+		}
+
+
 		:root {
 			--em-size: 16px;
-			--font-stack: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+			/* --font-stack: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, Cantarell, Ubuntu, roboto, noto, arial, sans-serif; */
+			--font-stack: "Silka", sans-serif;
 
 			--c-plate: white;
 			--c-text: #3F3A36;
@@ -188,7 +205,7 @@
 <body>
 	<header>
 		<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none">
-			<circle cx="24" cy="24" r="22" fill="var(--c-whale-bg)" />
+			<circle cx="24" cy="24" r="24" fill="var(--c-whale-bg)" />
 			<path fill="var(--c-whale-belly)"
 				d="M17.4 47.2A23.4 23.4 0 0 0 46 31a.9.9 0 0 0-.6-1L1.6 18a.8.8 0 0 0-1 .6 24 24 0 0 0 16.8 28.6Z" />
 			<path fill="var(--c-whale-body)"
