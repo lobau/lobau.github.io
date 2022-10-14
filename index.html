@@ -2,497 +2,543 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US" prefix="og: http://ogp.me/ns#">
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Since 2006, I helped companies such as Bohemian Coding, Upthere, Apple, Sandisk, Western Digital, and more to build products used by millions." />
-	<title>Laurent Baumann</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Since 2006, I helped companies such as Bohemian Coding, Upthere, Apple, Sandisk, Western Digital, and more to build products used by millions." />
+    <title>Laurent Baumann</title>
 
-	<!-- Stylesheet -->
-	<style type="text/css">
-		@font-face {
-			font-family: 'Silka';
-			src: url('fonts/silka-regular.woff2') format('woff2');
-			font-weight: 400;
-			font-style: normal;
-		}
+    <!-- Stylesheet -->
+    <style type="text/css">
+        @font-face {
+            font-family: 'Silka';
+            src: url('fonts/silka-regular.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+        }
 
-		@font-face {
-			font-family: 'Silka';
-			src: url('fonts/silka-bold.woff2') format('woff2');
-			font-weight: 600;
-			font-style: normal;
-		}
-
-
-		:root {
-			--em-size: 16px;
-			--font-stack: "Silka", sans-serif;
-
-			--c-plate: white;
-			--c-text: #3F3A36;
-
-			--c-border: rgba(114, 85, 62, 0.25);
-
-			--c-button-text: #6C390F;
-			--c-button-text-hover: #3F3A36;
-
-			--gradient-light: #FFF3B7;
-			--gradient-dark: #ffd0bb;
-
-			--c-whale-bg: #E9F7FD;
-			--c-whale-belly: #8BD5F0;
-			--c-whale-body: #14AFE9;
-			--c-whale-eye: #36386C;
-		}
-
-		@media (prefers-color-scheme:dark) {
-			:root {
-				--c-plate: #353535;
-				--c-text: white;
-				--c-border: rgba(255, 255, 255, 0.15);
-
-				--c-button-text: #FFDBFB;
-				--c-button-text-hover: #fff;
-
-				--gradient-light: #bb6acf;
-				--gradient-dark: #7B61BF;
-
-				--c-whale-bg: #5345a6;
-				--c-whale-belly: #7b61bf;
-				--c-whale-body: #a467c9;
-				--c-whale-eye: #4B0082;
-			}
-		}
+        @font-face {
+            font-family: 'Silka';
+            src: url('fonts/silka-bold.woff2') format('woff2');
+            font-weight: 600;
+            font-style: normal;
+        }
 
 
-		* {
-			padding: 0;
-			margin: 0;
-			border: none;
-			font-family: var(--font-stack);
-		}
+        :root {
+            --em-size: 16px;
+            --font-stack: "Silka", sans-serif;
 
-		body {
-			background-color: var(--c-plate);
-			font-size: var(--em-size);
-		}
+            --c-plate: white;
+            --c-text: #3F3A36;
+            --c-text-light: slategray;
 
-		a,
-		a:link,
-		a:visited {
-			--text-color: var(--c-button-text);
+            --c-border: rgba(114, 85, 62, 0.25);
 
-			display: inline-block;
-			padding: 0.75rem 1.25rem;
-			margin: 1rem 0.5rem 0 0;
+            --c-button-text: #6C390F;
+            --c-button-text-hover: #3F3A36;
 
-			font-family: var(--font-stack);
-			font-weight: 600;
-			font-size: 1rem;
-			text-decoration: none;
-			text-align: center;
-			border-radius: 1rem;
-			border: none;
+            --gradient-light: #FFF3B7;
+            --gradient-dark: #ffd0bb;
 
-			color: var(--c-button-text);
-		}
+            --c-whale-bg: Seashell;
+            --c-whale-belly: paleturquoise;
+            --c-whale-body: skyblue;
+            --c-whale-eye: steelblue;
 
-		a:hover {
-			color: var(--c-button-text-hover);
-			--text-color: var(--c-button-text-hover);
-			--c-border: var(--c-text);
-		}
+            --c-link: rebeccapurple;
+            --c-link-hover: indigo;
+            --c-accent: lavender;
+            --c-accent-hover: Seashell;
+        }
 
-		a>svg {
-			display: inline-block;
-			vertical-align: -8%;
-			margin-left: 0;
-			margin-right: 8px;
-			fill: var(--text-color);
-		}
+        @media (prefers-color-scheme:dark) {
+            :root {
+                --c-plate: black;
+                --c-text: lightgray;
+                --c-text-light: slategray;
 
-		h1 {
-			margin: 10px auto 2rem auto;
-			color: var(--c-text);
-		}
+                --c-border: rgba(255, 255, 255, 0.15);
 
-		h2 {
-			margin: 0 auto 1rem auto;
-			color: var(--c-text);
-		}
+                --c-button-text: lavender;
+                --c-button-text-hover: white;
 
-		header {
-			padding: 8rem 3rem 5rem 3rem;
-			max-width: 36rem;
-			margin: 0 auto;
-		}
+                --gradient-light: BlueViolet;
+                --gradient-dark: darkslateblue;
 
-		footer {
-			padding: 5rem 3rem 5rem 3rem;
-			max-width: 36rem;
-			margin: 0 auto;
-		}
+                --c-whale-bg: darkslateblue;
+                --c-whale-belly: rebeccapurple;
+                --c-whale-body: BlueViolet;
+                --c-whale-eye: black;
 
-		main {
-			padding: 0 2rem;
-			max-width: 72rem;
-			margin: 0 auto;
-			display: grid;
-			gap: 2rem;
-			grid-auto-flow: dense;
-			grid-template-columns: repeat(auto-fill, minmax(min(18rem, 100%), 1fr));
-		}
+                --c-link: BlueViolet;
+                --c-link-hover: white;
+                --c-accent: rebeccapurple;
+                --c-accent-hover: indigo;
+            }
+        }
 
-		section {
-			overflow: hidden;
-			box-shadow: inset 0px 0px 0px 1px var(--c-border);
-			border-radius: 2rem;
-			display: block;
-		}
 
-		picture,
-		img {
-			display: block;
-			position: relative;
-			z-index: -1;
-			width: 100%;
-			height: 16rem;
-			object-fit: cover;
-		}
+        * {
+            padding: 0;
+            margin: 0;
+            border: none;
+            font-family: var(--font-stack);
+        }
 
-		article {
-			padding: 2rem;
-		}
+        body {
+            background-color: var(--c-plate);
+            font-size: var(--em-size);
+        }
 
-		article>p {
-			display: -webkit-box;
-			-webkit-line-clamp: 3;
-			-webkit-box-orient: vertical;
-			overflow: hidden;
-			min-height: 5rem;
-			margin-bottom: 1rem;
-			max-width: 20rem;
-		}
+        header {
+            padding: 8rem 3rem 5rem 3rem;
+            max-width: 36rem;
+            margin: 0 auto;
+        }
 
-		picture::after,
-		video::after {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			box-shadow: inset 0 -1px 0px 0px var(--c-border);
-			overflow: hidden;
-		}
+        header>a,
+        header>a:link,
+        header>a:visited {
+            --text-color: var(--c-button-text);
 
-		p {
-			color: var(--c-text);
-			font-size: 1.1rem;
-			line-height: 1.5;
-			text-align: left;
-		}
+            display: inline-block;
+            padding: 0.75rem 1.25rem;
+            margin: 1rem 0.5rem 0 0;
 
-		header>p {
-			margin-bottom: 1rem;
-		}
-	</style>
+            font-family: var(--font-stack);
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 0.5rem;
+            border: none;
 
-	<!-- Basic Open Graph -->
-	<meta itemProp="name" content="Laurent Baumann" class="next-head"/>
-	<meta itemProp="description" content="Founder and CEO of PopStage." class="next-head"/>
-	<meta itemProp="image" content="https://lobau.io/opengraph.jpg" class="next-head"/>
+            color: var(--c-button-text);
+        }
 
-	<!-- Twitter specific Open Graph -->
-	<meta name="twitter:card" content="summary_large_image" class="next-head"/>
-	<meta name="twitter:site" content="@lobau" class="next-head"/>
-	<meta name="twitter:title" content="Laurent Baumann" class="next-head"/>
-	<meta name="twitter:description" content="Founder and CEO of PopStage." class="next-head"/>
-	<meta name="twitter:creator" content="@lobau" class="next-head"/>
-	<meta name="twitter:image:src" content="https://lobau.io/opengraph.jpg" class="next-head"/>
+        header>a:hover {
+            color: var(--c-button-text-hover);
+            --text-color: var(--c-button-text-hover);
+            --c-border: var(--c-text);
+        }
 
-	<!-- Generic Open Graph -->
-	<meta property="og:title" content="Laurent Baumann" class="next-head"/>
-	<meta property="og:type" content="article" class="next-head"/>
-	<meta property="og:url" content="" class="next-head"/>
-	<meta property="og:image" content="opengraph.jpg" class="next-head"/>
-	<meta property="og:description" content="Founder and CEO of PopStage." class="next-head"/>
-	<meta property="og:site_name" content="lobau.io" class="next-head"/>
+        header>a>svg {
+            display: inline-block;
+            vertical-align: -8%;
+            margin-left: 0;
+            margin-right: 8px;
+            fill: var(--text-color);
+        }
 
-	<!-- Favicon -->
-	<link rel="icon" type="image/svg+xml"
-		href="data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cstyle type='text/css'%3E @media (prefers-color-scheme: dark) %7B path %7B fill: %23fff; %7D %7D %3C/style%3E%3Cpath fill='%2314AFE9' fill-rule='evenodd' d='M6 14.7c3.3 1 8.3-.3 9.8-5.7.8-3.3-.6-7.2-3.8-8.2-.1 0-.2 0-.2.2v.3c0 .8.1 1.5.3 2 0 .3-.2.5-.4.5a6 6 0 0 1-2.5-.6c-.1 0-.3 0-.2.2.2 3.1 3.7 4.2 4.7 3.8-.2.7-1 1-2 .8L.6 5c-.2 0-.4 0-.4.2a8.2 8.2 0 0 0 5.7 9.5ZM6 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z' clip-rule='evenodd'/%3E%3C/svg%3E">
+        h1 {
+            margin: 10px auto 2rem auto;
+            color: var(--c-text);
+        }
 
-	<script defer data-domain="lobau.io" src="https://plausible.io/js/plausible.js"></script>
+        h2 {
+            margin: 0 auto 1rem auto;
+            color: var(--c-text);
+        }
+
+        footer {
+            padding: 3rem 3rem 5rem 3rem;
+            max-width: 36rem;
+            margin: 0 auto;
+        }
+
+        footer > p {
+            color: var(--c-text-light);
+            padding: 0;
+            margin: 0;
+        }
+
+        main {
+            padding: 0 2rem;
+            max-width: 64rem;
+            margin: 0 auto;
+            display: grid;
+            gap: 2rem;
+            grid-auto-flow: dense;
+            /* grid-template-columns: repeat(auto-fill, minmax(min(18rem, 100%), 1fr)); */
+            grid-template-columns: repeat(auto-fill, minmax(min(24rem, 100%), 1fr));
+        }
+
+        section {
+            padding: 5rem 3rem 0 3rem;
+            max-width: 36rem;
+            margin: 0 auto;
+        }
+
+
+        main>a {
+            overflow: hidden;
+            border-radius: 1rem;
+            display: block;
+            text-decoration: none;
+            border: 1px solid var(--c-border);
+        }
+
+        main>a:hover {
+            background-color: var(--c-accent-hover);
+        }
+
+        picture,
+        img {
+            display: block;
+            position: relative;
+            width: 100%;
+            height: 16rem;
+            object-fit: cover;
+        }
+
+        a>article {
+            padding: 2rem 2rem 1rem 2rem;
+        }
+
+        /* a>article>p {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            min-height: 5rem;
+        } */
+
+        picture::after,
+        video::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            box-shadow: inset 0 -1px 0px 0px var(--c-border);
+            overflow: hidden;
+        }
+
+        p {
+            color: var(--c-text);
+            font-size: 1.1rem;
+            line-height: 1.5;
+            text-align: left;
+            margin-bottom: 1rem;
+        }
+
+        p>a,
+        p>a:link,
+        p>a:visited {
+            display: inline;
+            position: relative;
+            padding: 2px;
+            text-decoration: none;
+            color: var(--c-link);
+            font-weight: 400;
+            white-space: nowrap;
+            --text-color: var(--c-link);
+        }
+
+        p>a:hover {
+            color: var(--c-link-hover);
+            --text-color: var(--c-link-hover);
+        }
+
+        p>a:focus {
+            outline: 1px solid var(--c-accent)
+        }
+
+        p>a:before {
+            transform: scaleY(.07);
+            transform-origin: bottom right
+        }
+
+        p>a:hover:before {
+            inset: 0px -4px;
+            transform: scaleY(1);
+            transform-origin: bottom left;
+            background: var(--c-accent-hover);
+        }
+
+        p>a:before {
+            content: " ";
+            display: block;
+            position: absolute;
+            inset: 0px 0px;
+            border-radius: 4px;
+            background: var(--c-accent);
+            z-index: -1;
+            transition: all .25s ease;
+        }
+
+        p>a>svg {
+            display: inline-block;
+            vertical-align: -4%;
+            margin-left: 0;
+            margin-right: 8px;
+            fill: var(--text-color);
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        li {
+            margin-bottom: 5rem;
+        }
+
+        header>p {
+            margin-bottom: 1rem;
+        }
+    </style>
+
+    <!-- Basic Open Graph -->
+    <meta itemProp="name" content="Laurent Baumann" class="next-head" />
+    <meta itemProp="description" content="Founder and CEO of PopStage." class="next-head" />
+    <meta itemProp="image" content="https://lobau.io/opengraph.jpg" class="next-head" />
+
+    <!-- Twitter specific Open Graph -->
+    <meta name="twitter:card" content="summary_large_image" class="next-head" />
+    <meta name="twitter:site" content="@lobau" class="next-head" />
+    <meta name="twitter:title" content="Laurent Baumann" class="next-head" />
+    <meta name="twitter:description" content="Founder and CEO of PopStage." class="next-head" />
+    <meta name="twitter:creator" content="@lobau" class="next-head" />
+    <meta name="twitter:image:src" content="https://lobau.io/opengraph.jpg" class="next-head" />
+
+    <!-- Generic Open Graph -->
+    <meta property="og:title" content="Laurent Baumann" class="next-head" />
+    <meta property="og:type" content="article" class="next-head" />
+    <meta property="og:url" content="" class="next-head" />
+    <meta property="og:image" content="opengraph.jpg" class="next-head" />
+    <meta property="og:description" content="Founder and CEO of PopStage." class="next-head" />
+    <meta property="og:site_name" content="lobau.io" class="next-head" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cstyle type='text/css'%3E @media (prefers-color-scheme: dark) %7B path %7B fill: %23fff; %7D %7D %3C/style%3E%3Cpath fill='%2314AFE9' fill-rule='evenodd' d='M6 14.7c3.3 1 8.3-.3 9.8-5.7.8-3.3-.6-7.2-3.8-8.2-.1 0-.2 0-.2.2v.3c0 .8.1 1.5.3 2 0 .3-.2.5-.4.5a6 6 0 0 1-2.5-.6c-.1 0-.3 0-.2.2.2 3.1 3.7 4.2 4.7 3.8-.2.7-1 1-2 .8L.6 5c-.2 0-.4 0-.4.2a8.2 8.2 0 0 0 5.7 9.5ZM6 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z' clip-rule='evenodd'/%3E%3C/svg%3E">
+
+    <script defer data-domain="lobau.io" src="https://plausible.io/js/plausible.js"></script>
 </head>
 
 <body>
-	<header>
-		<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none">
-			<circle cx="24" cy="24" r="24" fill="var(--c-whale-bg)" />
-			<path fill="var(--c-whale-belly)"
-				d="M17.4 47.2A23.4 23.4 0 0 0 46 31a.9.9 0 0 0-.6-1L1.6 18a.8.8 0 0 0-1 .6 24 24 0 0 0 16.8 28.6Z" />
-			<path fill="var(--c-whale-body)"
-				d="M38.6 42.4c4-3 7-7.2 8.5-12.4 2-7.5.8-16.7-6.2-19a.4.4 0 0 0-.6.5c0 1.5-.1 2.9-.3 4.1l-.2 1.3a1 1 0 0 1-1 .8h-1.5c-1.4 0-3 0-4.7-.5-.3 0-.6.2-.6.5.9 5.1 6.5 7.4 9.3 7.6.6 0 1.1.5.8 1-.7 1.2-2.8 1.7-5.2 1L1.6 18c-.4 0-.8.2-.7.7 2.2 10.8 11 20 23 23.2 5 1.3 10 1.4 14.7.5Z" />
-			<circle cx="18" cy="31" r="2" fill="var(--c-whale-eye)" />
-		</svg>
+    <header>
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none">
+            <circle cx="24" cy="24" r="24" fill="var(--c-whale-bg)" />
+            <path fill="var(--c-whale-belly)"
+                d="M17.4 47.2A23.4 23.4 0 0 0 46 31a.9.9 0 0 0-.6-1L1.6 18a.8.8 0 0 0-1 .6 24 24 0 0 0 16.8 28.6Z" />
+            <path fill="var(--c-whale-body)"
+                d="M38.6 42.4c4-3 7-7.2 8.5-12.4 2-7.5.8-16.7-6.2-19a.4.4 0 0 0-.6.5c0 1.5-.1 2.9-.3 4.1l-.2 1.3a1 1 0 0 1-1 .8h-1.5c-1.4 0-3 0-4.7-.5-.3 0-.6.2-.6.5.9 5.1 6.5 7.4 9.3 7.6.6 0 1.1.5.8 1-.7 1.2-2.8 1.7-5.2 1L1.6 18c-.4 0-.8.2-.7.7 2.2 10.8 11 20 23 23.2 5 1.3 10 1.4 14.7.5Z" />
+            <circle cx="18" cy="31" r="2" fill="var(--c-whale-eye)" />
+        </svg>
+
+        <h1>Laurent Baumann</h1>
+        <p>I am currently the founder and CEO of PopStage.</p>
+        <p>Since 2006, I helped companies such as Bohemian Coding, Upthere, Apple, Sandisk, Western Digital, and more to
+            build products used by millions.</p>
+        <a href="https://twitter.com/lobau/status/1486578799835639809" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                <path
+                    d="M16 3c-.6.3-1.3.5-2 .6.8-.4 1.3-1 1.5-1.8l-2 .8a3.3 3.3 0 0 0-5.6 3A9.3 9.3 0 0 1 1 2a3.3 3.3 0 0 0 1 4.4c-.5 0-1-.2-1.5-.4 0 1.6 1.2 3 2.7 3.2a3.3 3.3 0 0 1-1.5 0 3.3 3.3 0 0 0 3 2.4A6.6 6.6 0 0 1 0 13a9.3 9.3 0 0 0 14.3-8.3c.7-.4 1.2-1 1.7-1.6z" />
+            </svg>Twitter</a>
+
+        <a href="https://dribbble.com/lobau/collections/5476970-Apple" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                <path fill-rule="evenodd"
+                    d="M8.04.1A7.94 7.94 0 1 0 8.05 16 7.94 7.94 0 0 0 8.04.1Zm.74 4.77a32.89 32.89 0 0 0-1.77-2.84 6.07 6.07 0 0 1 4.6 1.06c-.86.7-1.8 1.3-2.83 1.78Zm-5.67 1.3c-.3 0-.58-.01-.86-.03a6.09 6.09 0 0 1 2.95-3.5 29.5 29.5 0 0 1 1.85 2.88c-1.25.4-2.57.65-3.94.65Zm7 1.31c-.15-.34-.3-.67-.47-1a15.39 15.39 0 0 0 3.28-2.1c.67.9 1.1 1.98 1.2 3.15a10.8 10.8 0 0 0-4-.05Zm-7 .53c1.7 0 3.3-.33 4.82-.84l.4.8a10.92 10.92 0 0 0-5.15 3.75 6.06 6.06 0 0 1-1.24-3.77c.38.03.77.06 1.17.06Zm8.8 4.74c-.3-1.2-.67-2.35-1.1-3.47.39-.08.74-.14 1.11-.14.71 0 1.4.09 2.06.25a6.08 6.08 0 0 1-2.07 3.36Zm-3.87 1.38a6.06 6.06 0 0 1-3.53-1.12 9.06 9.06 0 0 1 4.5-3.36c.5 1.32.93 2.67 1.24 4.07a6.2 6.2 0 0 1-2.21.41Z"
+                    clip-rule="evenodd" />
+            </svg>Dribbble</a>
+
+        <a href="https://www.linkedin.com/in/laurentbaumann/" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                <path fill-rule="evenodd"
+                    d="M4.2 3c0 .9-.66 1.62-1.7 1.62h-.03C1.47 4.62.81 3.9.81 3c0-.92.67-1.62 1.7-1.62 1.03 0 1.66.7 1.68 1.62ZM4 15V6H1v9h3Zm4.95 0V9.98c0-.27.02-.54.1-.73.2-.54.7-1.1 1.5-1.1 1.08 0 1.5.83 1.5 2.04V15H15V9.84c0-2.76-1.45-4.04-3.4-4.04-1.56 0-2.26.87-2.65 1.48V6.01H6C6.04 6.85 6 15 6 15h2.95Z"
+                    clip-rule="evenodd" />
+            </svg>LinkedIn</a>
+    </header>
+
+    <main>
+        <a href="https://popstage.com" target="_blank">
+            <picture>
+                <source media="(prefers-color-scheme:dark)" srcset="img/popstage_dark.jpg" />
+                <img src="img/popstage.jpg" alt="PopStage">
+            </picture>
+
+            <article>
+                <h2>PopStage</h2>
+                <p>Design interactive courses, host engaging workshops, and learn how to improve them.</p>
+            </article>
+        </a>
+
+        <a href="https://popspace.io" target="_blank">
+            <picture>
+                <source media="(prefers-color-scheme:dark)" srcset="img/popspace.jpg" />
+                <img src="img/popspace.jpg" alt="PopSpace">
+            </picture>
+            <article>
+                <h2>PopSpace</h2>
+                <p>An open-source virtual canvas platform for chatting, collaborating, and playing.</p>
+            </article>
+        </a>
+
+        <!--<a href="https://sundown.app" target="_blank">
+            <picture>
+                <source media="(prefers-color-scheme:dark)" srcset="img/popspace.jpg" />
+                <img src="img/popspace.jpg" alt="PopSpace">
+            </picture>
+            <article>
+                <h2>Sundown</h2>
+                <p>An open-source markdown notebook with inline math and dropbox sync.</p>
+            </article>
+        </a>-->
+    </main>
+
+    <section>
+        <ul>
+            <li>
+                <article>
+                    <h2>Apple stories</h2>
+                    <p>Some stories behind some of the products I designed while working for Human Interface at Apple.
+                    </p>
+                    <p><a href="https://dribbble.com/lobau/collections/5476970-Apple" target="_blank"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                                <path fill-rule="evenodd"
+                                    d="M8.04.1A7.94 7.94 0 1 0 8.05 16 7.94 7.94 0 0 0 8.04.1Zm.74 4.77a32.89 32.89 0 0 0-1.77-2.84 6.07 6.07 0 0 1 4.6 1.06c-.86.7-1.8 1.3-2.83 1.78Zm-5.67 1.3c-.3 0-.58-.01-.86-.03a6.09 6.09 0 0 1 2.95-3.5 29.5 29.5 0 0 1 1.85 2.88c-1.25.4-2.57.65-3.94.65Zm7 1.31c-.15-.34-.3-.67-.47-1a15.39 15.39 0 0 0 3.28-2.1c.67.9 1.1 1.98 1.2 3.15a10.8 10.8 0 0 0-4-.05Zm-7 .53c1.7 0 3.3-.33 4.82-.84l.4.8a10.92 10.92 0 0 0-5.15 3.75 6.06 6.06 0 0 1-1.24-3.77c.38.03.77.06 1.17.06Zm8.8 4.74c-.3-1.2-.67-2.35-1.1-3.47.39-.08.74-.14 1.11-.14.71 0 1.4.09 2.06.25a6.08 6.08 0 0 1-2.07 3.36Zm-3.87 1.38a6.06 6.06 0 0 1-3.53-1.12 9.06 9.06 0 0 1 4.5-3.36c.5 1.32.93 2.67 1.24 4.07a6.2 6.2 0 0 1-2.21.41Z"
+                                    clip-rule="evenodd" />
+                            </svg>Read more on Dribbble</a></p>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <h2>DrawIt & Sketch</h2>
+                    <p>Around 2007, after being fed up using Photoshop for UI design, I decided to look around for a
+                        better solution.
+                        Eventually, I found the website of Pieter Omvlee, who was working, on his own, on a cool
+                        software called DrawIt.</p>
+                    <p>
+                        <a href="https://dribbble.com/shots/14179642-DrawIt-app" target="_blank"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                                <path fill-rule="evenodd"
+                                    d="M8.04.1A7.94 7.94 0 1 0 8.05 16 7.94 7.94 0 0 0 8.04.1Zm.74 4.77a32.89 32.89 0 0 0-1.77-2.84 6.07 6.07 0 0 1 4.6 1.06c-.86.7-1.8 1.3-2.83 1.78Zm-5.67 1.3c-.3 0-.58-.01-.86-.03a6.09 6.09 0 0 1 2.95-3.5 29.5 29.5 0 0 1 1.85 2.88c-1.25.4-2.57.65-3.94.65Zm7 1.31c-.15-.34-.3-.67-.47-1a15.39 15.39 0 0 0 3.28-2.1c.67.9 1.1 1.98 1.2 3.15a10.8 10.8 0 0 0-4-.05Zm-7 .53c1.7 0 3.3-.33 4.82-.84l.4.8a10.92 10.92 0 0 0-5.15 3.75 6.06 6.06 0 0 1-1.24-3.77c.38.03.77.06 1.17.06Zm8.8 4.74c-.3-1.2-.67-2.35-1.1-3.47.39-.08.74-.14 1.11-.14.71 0 1.4.09 2.06.25a6.08 6.08 0 0 1-2.07 3.36Zm-3.87 1.38a6.06 6.06 0 0 1-3.53-1.12 9.06 9.06 0 0 1 4.5-3.36c.5 1.32.93 2.67 1.24 4.07a6.2 6.2 0 0 1-2.21.41Z"
+                                    clip-rule="evenodd" />
+                            </svg>Read more on Dribbble</a>
+                    </p>
+                    </p>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <h2>Design Tips</h2>
+                    <p>Over the years, I realized that sharing simple design tips often help non-designers feel more
+                        comfortable making presentations, simple mockups, or even the occasional card.</p>
+                    <p><a href="https://twitter.com/lobau/status/1486578799835639809" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 3c-.6.3-1.3.5-2 .6.8-.4 1.3-1 1.5-1.8l-2 .8a3.3 3.3 0 0 0-5.6 3A9.3 9.3 0 0 1 1 2a3.3 3.3 0 0 0 1 4.4c-.5 0-1-.2-1.5-.4 0 1.6 1.2 3 2.7 3.2a3.3 3.3 0 0 1-1.5 0 3.3 3.3 0 0 0 3 2.4A6.6 6.6 0 0 1 0 13a9.3 9.3 0 0 0 14.3-8.3c.7-.4 1.2-1 1.7-1.6z" />
+                            </svg>Read the thread on Twitter</a></p>
+                </article>
+            </li>
+        </ul>
+    </section>
 
 
-		<h1>Laurent Baumann</h1>
-		<p>I am currently the founder and CEO of PopStage.</p>
-		<p>Since 2006, I helped companies such as Bohemian Coding, Upthere, Apple, Sandisk, Western Digital, and more to build products used by millions.</p>
-	</header>
+    <footer>
+        <p>©2022 Laurent Baumann</p>
+        <p>hello <strong>à</strong> lobau.io</p>
+    </footer>
 
-	<main>
-		<section>
-			<picture>
-				<source media="(prefers-color-scheme:dark)" srcset="img/popstage_dark.jpg" />
-				<img src="img/popstage.jpg" alt="PopStage">
-			</picture>
+    <!-- Scripts -->
+    <script type="text/javascript">
+        class ShadedBox {
+            constructor(domEl, param) {
+                this.view = domEl;
+                this.param = param;
+                this.shadow = this.param.shadow || "255, 0, 0";
+                this.size = this.param.size || "400px";
+                this.elevation = this.param.elevation || 30;
+                this.transparency = this.param.transparency || 0.15;
 
-			<article>
-				<h2>PopStage</h2>
-				<p>Design interactive courses, host engaging workshops, and learn how to improve them.</p>
-				<a href="https://popstage.com" target="_blank">
-					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none">
-						<path fill-rule="evenodd"
-							d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16Zm3-9.26a1.8 1.8 0 0 0-.5-1.21C10.2 5.2 9.75 5 9.2 5c-.77 0-1.62.5-2 1.75-.4 1.26-.31 3.32 1.08 6.12a1 1 0 0 1-1.8.89c-1.52-3.08-1.8-5.69-1.2-7.61C5.9 4.2 7.43 3 9.21 3a3.72 3.72 0 0 1 3.78 3.74 3.74 3.74 0 0 1-3.83 3.75c-.27 0-.53-.02-.8-.07a7.54 7.54 0 0 1-.37-2.22c.44.21.84.3 1.17.3 1.08 0 1.83-.77 1.83-1.75Zm-6.95.4a14.6 14.6 0 0 1-.97-1.73 1 1 0 0 1 1.81-.85 6.24 6.24 0 0 0-.84 2.58Z"
-							clip-rule="evenodd" />
-					</svg>Visit PopStage</a>
-			</article>
-		</section>
+                var position = this.view.getBoundingClientRect();
+                var objectX = position.x + position.width / 2;
+                var objectY = position.y + position.height / 2;
 
-		<section>
-			<picture>
-				<source media="(prefers-color-scheme:dark)" srcset="img/popspace.jpg" />
-				<img src="img/popspace.jpg" alt="PopSpace">
-			</picture>
-			<article>
-				<h2>PopSpace</h2>
-				<p>An open-source virtual canvas platform for chatting, collaborating, and playing.</p>
-				<a href="https://popspace.io" target="_blank">
-					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
-						<path d="M15.5 4.88a.92.92 0 0 0 .32-1.33 8.77 8.77 0 0 0-15.1 8.71c.23.5.84.67 1.32.4l6.73-3.9 6.73-3.88Z" opacity=".2"/>
-						<path fill-rule="evenodd" d="m7.36 6.65-1.64 6.11 5.98 1.6 1.64-6.11-5.98-1.6Zm-1.32-.88a1 1 0 0 1 1.22-.7l6.95 1.86a1 1 0 0 1 .7 1.22l-1.89 7.08a1 1 0 0 1-1.22.71l-6.95-1.86a1 1 0 0 1-.71-1.22l1.9-7.09Z" clip-rule="evenodd"/>
-					  </svg>Visit PopSpace</a>
-			</article>
-		</section>
+                this.updateShadow({
+                    x: objectX,
+                    y: objectY - 200,
+                });
 
-		<section>
-			<picture>
-				<source media="(prefers-color-scheme:dark)" srcset="img/pairs_dark.jpg" />
-				<img src="img/pairs.jpg" alt="Pairs">
-			</picture>
-			<article>
-				<h2>Pairs</h2>
-				<p>An open-source ear training app. No vocabulary, no lessons, just hearing reinforcement.</p>
-				<a href="https://lobau.io/pairs/" target="_blank">
-					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
-						<path fill-rule="evenodd" d="M5 0a5 5 0 0 0-5 5v4c0 .6.4 1 1 1h2.5c.3 0 .5-.2.5-.5V6c0-1.1.9-2 2-2h3.5c.3 0 .5-.2.5-.5V1c0-.6-.4-1-1-1H5Zm1 7c0-.6.4-1 1-1h2.5c.3 0 .5.2.5.5V9c0 .6-.4 1-1 1H6.5a.5.5 0 0 1-.5-.5V7Zm10 4a5 5 0 0 1-5 5H7a1 1 0 0 1-1-1v-2.5c0-.3.2-.5.5-.5H10a2 2 0 0 0 2-2V6.5c0-.3.2-.5.5-.5H15c.6 0 1 .4 1 1v4Z" clip-rule="evenodd"/>
-					  </svg>Visit Pairs</a>
-			</article>
-		</section>
+                window.addEventListener(
+                    "mousemove",
+                    function (e) {
+                        this.updateShadow(e);
+                    }.bind(this)
+                );
+            }
 
-		<section>
-			<picture>
-				<source media="(prefers-color-scheme:dark)" srcset="img/uxmd_dark.jpg" />
-				<img src="img/uxmd.jpg" alt="UXMD">
-			</picture>
-			<article>
-				<h2>UXMD</h2>
-				<p>An open-source app for anybody with some markdown knowledge to quickly draft UX flows. </p>
-				<a href="https://uxmd.io" target="_blank">
-					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
-						<path fill-rule="evenodd" d="M10.707.293a1 1 0 1 0-1.414 1.414L11.086 3.5 9.293 5.293a1 1 0 0 0 1.414 1.414L12.5 4.914l1.793 1.793a1 1 0 1 0 1.414-1.414L13.914 3.5l1.793-1.793A1 1 0 0 0 14.293.293L12.5 2.086 10.707.293ZM2 1a1 1 0 0 0-2 0v3a3.5 3.5 0 0 0 7 0V1a1 1 0 0 0-2 0v3a1.5 1.5 0 1 1-3 0V1ZM.617 9.076a1 1 0 0 1 1.09.217L3.5 11.086l1.793-1.793A1 1 0 0 1 7 10v5a1 1 0 1 1-2 0v-2.586l-.793.793a1 1 0 0 1-1.414 0L2 12.414V15a1 1 0 1 1-2 0v-5a1 1 0 0 1 .617-.924ZM12.5 9H10a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h2.5a3.5 3.5 0 1 0 0-7ZM11 14v-3h1.5a1.5 1.5 0 0 1 0 3H11Z" clip-rule="evenodd"/>
-					  </svg>Visit UXMD</a>
-			</article>
-		</section>
+            updateShadow(e) {
+                var position = this.view.getBoundingClientRect();
 
-		<section>
-			<picture>
-				<source media="(prefers-color-scheme:dark)" srcset="img/apple_dark.jpg" />
-				<img src="img/apple.jpg" alt="Apple">
-			</picture>
-			<article>
-				<h2>Apple</h2>
-				<p>Some stories behind some of the products I designed while working for Human Interface at Apple.</p>
-				<a href="https://dribbble.com/lobau/collections/5476970-Apple" target="_blank">
-					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
-						<path fill-rule="evenodd"
-							d="M8.04.1A7.94 7.94 0 1 0 8.05 16 7.94 7.94 0 0 0 8.04.1Zm.74 4.77a32.89 32.89 0 0 0-1.77-2.84 6.07 6.07 0 0 1 4.6 1.06c-.86.7-1.8 1.3-2.83 1.78Zm-5.67 1.3c-.3 0-.58-.01-.86-.03a6.09 6.09 0 0 1 2.95-3.5 29.5 29.5 0 0 1 1.85 2.88c-1.25.4-2.57.65-3.94.65Zm7 1.31c-.15-.34-.3-.67-.47-1a15.39 15.39 0 0 0 3.28-2.1c.67.9 1.1 1.98 1.2 3.15a10.8 10.8 0 0 0-4-.05Zm-7 .53c1.7 0 3.3-.33 4.82-.84l.4.8a10.92 10.92 0 0 0-5.15 3.75 6.06 6.06 0 0 1-1.24-3.77c.38.03.77.06 1.17.06Zm8.8 4.74c-.3-1.2-.67-2.35-1.1-3.47.39-.08.74-.14 1.11-.14.71 0 1.4.09 2.06.25a6.08 6.08 0 0 1-2.07 3.36Zm-3.87 1.38a6.06 6.06 0 0 1-3.53-1.12 9.06 9.06 0 0 1 4.5-3.36c.5 1.32.93 2.67 1.24 4.07a6.2 6.2 0 0 1-2.21.41Z"
-							clip-rule="evenodd" />
-					</svg>Read on Dribbble</a>
-			</article>
-		</section>
+                var mouseX = e.x;
+                var mouseY = e.y;
 
-		<section>
-			<picture>
-				<source media="(prefers-color-scheme:dark)" srcset="img/drawit_dark.jpg" />
-				<img src="img/drawit.jpg" alt="DrawIt">
-			</picture>
-			<article>
-				<h2>DrawIt & Sketch</h2>
-				<p>Around 2007, after being fed up using Photoshop for UI design, I decided to look around. Eventually,
-					I found the website of Pieter Omvlee, who was working, on his own, on a cool software called DrawIt.
-				</p>
-				<a href="https://dribbble.com/shots/14179642-DrawIt-app" target="_blank">
-					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
-						<path fill-rule="evenodd"
-							d="M8.04.1A7.94 7.94 0 1 0 8.05 16 7.94 7.94 0 0 0 8.04.1Zm.74 4.77a32.89 32.89 0 0 0-1.77-2.84 6.07 6.07 0 0 1 4.6 1.06c-.86.7-1.8 1.3-2.83 1.78Zm-5.67 1.3c-.3 0-.58-.01-.86-.03a6.09 6.09 0 0 1 2.95-3.5 29.5 29.5 0 0 1 1.85 2.88c-1.25.4-2.57.65-3.94.65Zm7 1.31c-.15-.34-.3-.67-.47-1a15.39 15.39 0 0 0 3.28-2.1c.67.9 1.1 1.98 1.2 3.15a10.8 10.8 0 0 0-4-.05Zm-7 .53c1.7 0 3.3-.33 4.82-.84l.4.8a10.92 10.92 0 0 0-5.15 3.75 6.06 6.06 0 0 1-1.24-3.77c.38.03.77.06 1.17.06Zm8.8 4.74c-.3-1.2-.67-2.35-1.1-3.47.39-.08.74-.14 1.11-.14.71 0 1.4.09 2.06.25a6.08 6.08 0 0 1-2.07 3.36Zm-3.87 1.38a6.06 6.06 0 0 1-3.53-1.12 9.06 9.06 0 0 1 4.5-3.36c.5 1.32.93 2.67 1.24 4.07a6.2 6.2 0 0 1-2.21.41Z"
-							clip-rule="evenodd" />
-					</svg>Read on Dribbble</a>
-			</article>
-		</section>
+                var objectX = position.x + position.width / 2;
+                var objectY = position.y + position.height / 2;
 
-		<section>
-			<picture>
-				<source media="(prefers-color-scheme:dark)" srcset="img/designbits_dark.jpg" />
-				<img src="img/designbits.jpg" alt="Design Tips">
-			</picture>
-			<article>
-				<h2>Design Tips</h2>
-				<p>Over the years, I realized that sharing simple design tips often help non-designers feel more
-					comfortable making presentations, simple mockups, or even the occasional card.</p>
-				<a href="https://twitter.com/lobau/status/1486578799835639809" target="_blank">
-					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-						<path
-							d="M16 3c-.6.3-1.3.5-2 .6.8-.4 1.3-1 1.5-1.8l-2 .8a3.3 3.3 0 0 0-5.6 3A9.3 9.3 0 0 1 1 2a3.3 3.3 0 0 0 1 4.4c-.5 0-1-.2-1.5-.4 0 1.6 1.2 3 2.7 3.2a3.3 3.3 0 0 1-1.5 0 3.3 3.3 0 0 0 3 2.4A6.6 6.6 0 0 1 0 13a9.3 9.3 0 0 0 14.3-8.3c.7-.4 1.2-1 1.7-1.6z" />
-					</svg>Read on Twitter</a>
-			</article>
-		</section>
+                var distanceX = objectX - mouseX;
+                var distanceY = objectY - mouseY + 160; // so shadow is visible on hover
 
-		<section>
-			<picture>
-				<source media="(prefers-color-scheme:dark)" srcset="img/aboutme_dark.jpg" />
-				<img src="img/aboutme.jpg" alt="About Me">
-			</picture>
-			<article>
-				<h2>About me</h2>
-				<p>Founder & CEO at With Labs, maker of PopStage. Gritty or stubborn, I'm not sure yet~</p>
-				<a href="https://www.linkedin.com/in/laurentbaumann/" target="_blank">
-					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
-						<path fill-rule="evenodd" d="M4.2 3c0 .9-.66 1.62-1.7 1.62h-.03C1.47 4.62.81 3.9.81 3c0-.92.67-1.62 1.7-1.62 1.03 0 1.66.7 1.68 1.62ZM4 15V6H1v9h3Zm4.95 0V9.98c0-.27.02-.54.1-.73.2-.54.7-1.1 1.5-1.1 1.08 0 1.5.83 1.5 2.04V15H15V9.84c0-2.76-1.45-4.04-3.4-4.04-1.56 0-2.26.87-2.65 1.48V6.01H6C6.04 6.85 6 15 6 15h2.95Z" clip-rule="evenodd"/>
-					  </svg>LinkedIn</a>
-			</article>
-		</section>
+                var distanceToMouseX = mouseX - position.x;
+                var distanceToMouseY = mouseY - position.y;
 
-		<section>
-			<picture>
-				<source media="(prefers-color-scheme:dark)" srcset="img/withlabs_dark.jpg" />
-				<img src="img/withlabs.jpg" alt="About Me">
-			</picture>
-			<article>
-				<h2>With Labs</h2>
-				<p>With Labs was founded in 2020 to help people connect, collaborate, play and learn remotely.</p>
-				<a href="https://with.so" target="_blank">
-					<svg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'>
-						<path fill-rule='evenodd' clip-rule='evenodd' d='M5 3H1V9C1 11.2091 2.79086 13 5 13V9V3ZM6 3H10V9C10 11.2091 8.20914 13 6 13V9V3ZM15 3H11V9V13C13.2091 13 15 11.2091 15 9V3Z' />
-					</svg>With Labs</a>
-			</article>
-		</section>
+                this.view.style.backgroundImage = `radial-gradient(${this.size} at ${distanceToMouseX}px ${distanceToMouseY}px, var(--gradient-light), var(--gradient-dark))`;
 
-	</main>
+                var maxShadows = 6;
+                var shadowString = "";
+                shadowString += `inset 0px 0px 0px 1px var(--c-border), `;
 
-	<footer>
-		<p>©2022 Laurent Baumann</p>
-		<p>hello <strong>à</strong> lobau.io</p>
-	</footer>
+                var offsetX, offsetY, blur, falloff, transparency, distance;
+                for (var i = 1; i < maxShadows; i++) {
+                    if (i != 1) {
+                        shadowString += ", ";
+                    }
+                    offsetX = distanceX / (i * i * this.elevation);
+                    offsetY = distanceY / (i * i * this.elevation);
+                    distance = Math.abs(offsetX) + Math.abs(offsetY);
 
-	<!-- Scripts -->
-	<script type="text/javascript">
-		class ShadedBox {
-			constructor(domEl, param) {
-				this.view = domEl;
-				this.param = param;
-				this.shadow = this.param.shadow || "255, 0, 0";
-				this.size = this.param.size || "400px";
-				this.elevation = this.param.elevation || 30;
-				this.transparency = this.param.transparency || 0.15;
+                    blur = distance / 1.5;
+                    falloff = distance / 5;
+                    transparency = this.transparency / i;
+                    shadowString += `${offsetX}px ${offsetY}px ${blur}px -${falloff}px rgba(${this.shadow}, ${transparency})`;
+                }
 
-				var position = this.view.getBoundingClientRect();
-				var objectX = position.x + position.width / 2;
-				var objectY = position.y + position.height / 2;
+                var maxOffset = 3;
+                var innerShadowOffsetX = Math.min(
+                    Math.max(distanceX / 100, -maxOffset),
+                    maxOffset
+                );
+                var innerShadowOffsetY = Math.min(
+                    Math.max(distanceY / 100, -maxOffset),
+                    maxOffset
+                );
+                shadowString += `, inset ${innerShadowOffsetX}px ${innerShadowOffsetY}px 5px -1px var(--gradient-light)`;
 
-				this.updateShadow({
-					x: objectX,
-					y: objectY - 200,
-				});
+                this.view.style.boxShadow = shadowString;
+            }
+        }
 
-				window.addEventListener(
-					"mousemove",
-					function (e) {
-						this.updateShadow(e);
-					}.bind(this)
-				);
-			}
+        var buttonStyle = {
+            shadow: "85, 3, 77",
+            size: "500px",
+            elevation: 80,
+            transparency: 0.08,
+        };
 
-			updateShadow(e) {
-				var position = this.view.getBoundingClientRect();
-
-				var mouseX = e.x;
-				var mouseY = e.y;
-
-				var objectX = position.x + position.width / 2;
-				var objectY = position.y + position.height / 2;
-
-				var distanceX = objectX - mouseX;
-				var distanceY = objectY - mouseY + 160; // so shadow is visible on hover
-
-				var distanceToMouseX = mouseX - position.x;
-				var distanceToMouseY = mouseY - position.y;
-
-				this.view.style.backgroundImage = `radial-gradient(${this.size} at ${distanceToMouseX}px ${distanceToMouseY}px, var(--gradient-light), var(--gradient-dark))`;
-
-				var maxShadows = 6;
-				var shadowString = "";
-				shadowString += `inset 0px 0px 0px 1px var(--c-border), `;
-
-				var offsetX, offsetY, blur, falloff, transparency, distance;
-				for (var i = 1; i < maxShadows; i++) {
-					if (i != 1) {
-						shadowString += ", ";
-					}
-					offsetX = distanceX / (i * i * this.elevation);
-					offsetY = distanceY / (i * i * this.elevation);
-					distance = Math.abs(offsetX) + Math.abs(offsetY);
-
-					blur = distance / 1.5;
-					falloff = distance / 5;
-					transparency = this.transparency / i;
-					shadowString += `${offsetX}px ${offsetY}px ${blur}px -${falloff}px rgba(${this.shadow}, ${transparency})`;
-				}
-
-				var maxOffset = 3;
-				var innerShadowOffsetX = Math.min(
-					Math.max(distanceX / 100, -maxOffset),
-					maxOffset
-				);
-				var innerShadowOffsetY = Math.min(
-					Math.max(distanceY / 100, -maxOffset),
-					maxOffset
-				);
-				shadowString += `, inset ${innerShadowOffsetX}px ${innerShadowOffsetY}px 5px -1px var(--gradient-light)`;
-
-				this.view.style.boxShadow = shadowString;
-			}
-		}
-
-		var buttonStyle = {
-			shadow: "85, 3, 77",
-			size: "500px",
-			elevation: 80,
-			transparency: 0.08,
-		};
-
-		var Shaded_elements = [];
-		var shaded_el = document.querySelectorAll("a");
-		for (var i = 0; i < shaded_el.length; i++) {
-			console.log(shaded_el[i]);
-			Shaded_elements.push(new ShadedBox(shaded_el[i], buttonStyle));
-		}
+        var Shaded_elements = [];
+        var shaded_el = document.querySelectorAll("header > a");
+        for (var i = 0; i < shaded_el.length; i++) {
+            console.log(shaded_el[i]);
+            Shaded_elements.push(new ShadedBox(shaded_el[i], buttonStyle));
+        }
 
 
-	</script>
+    </script>
 </body>
 
 </html>
