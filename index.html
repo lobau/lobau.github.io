@@ -33,23 +33,23 @@
             --c-text: #3F3A36;
             --c-text-light: slategray;
 
-            --c-border: rgba(114, 85, 62, 0.25);
+            --c-button-text: sienna;
+            --c-button-text-hover: var(--c-text);
+            --c-button-background: papayaWhip;
+            --c-button-background-hover: peachPuff;
 
-            --c-button-text: #6C390F;
-            --c-button-text-hover: #3F3A36;
+            --c-card-background: seashell;
+            --c-card-background-hover: papayaWhip;
 
-            --gradient-light: #FFF3B7;
-            --gradient-dark: #ffd0bb;
-
-            --c-whale-bg: Seashell;
+            --c-whale-bg: papayaWhip;
             --c-whale-belly: paleturquoise;
             --c-whale-body: skyblue;
             --c-whale-eye: steelblue;
 
-            --c-link: rebeccapurple;
-            --c-link-hover: indigo;
-            --c-accent: lavender;
-            --c-accent-hover: Seashell;
+            --c-link: steelblue;
+            --c-link-hover: var(--c-text);
+            --c-accent: navajowhite;
+            --c-accent-hover: peachPuff;
         }
 
         @media (prefers-color-scheme:dark) {
@@ -58,23 +58,23 @@
                 --c-text: lightgray;
                 --c-text-light: slategray;
 
-                --c-border: rgba(255, 255, 255, 0.15);
+                --c-button-text: white;
+                --c-button-text-hover: var(--c-plate);
+                --c-button-background: slateblue;
+                --c-button-background-hover: paleturquoise;
 
-                --c-button-text: lavender;
-                --c-button-text-hover: white;
+                --c-card-background: #0a0a0a;
+                --c-card-background-hover: paleturquoise;
 
-                --gradient-light: BlueViolet;
-                --gradient-dark: darkslateblue;
+                --c-whale-bg: slateblue;
+                --c-whale-belly: paleturquoise;
+                --c-whale-body: skyblue;
+                --c-whale-eye: steelblue;
 
-                --c-whale-bg: darkslateblue;
-                --c-whale-belly: rebeccapurple;
-                --c-whale-body: BlueViolet;
-                --c-whale-eye: black;
-
-                --c-link: BlueViolet;
+                --c-link: LightSkyBlue;
                 --c-link-hover: white;
-                --c-accent: rebeccapurple;
-                --c-accent-hover: indigo;
+                --c-accent: cornflowerblue;
+                --c-accent-hover: slateblue;
             }
         }
 
@@ -115,12 +115,15 @@
             border: none;
 
             color: var(--c-button-text);
+            background-color: var(--c-button-background);
         }
 
         header>a:hover {
             color: var(--c-button-text-hover);
+            background-color: var(--c-button-background-hover);
+
+            color: var(--c-button-text-hover);
             --text-color: var(--c-button-text-hover);
-            --c-border: var(--c-text);
         }
 
         header>a>svg {
@@ -147,7 +150,7 @@
             margin: 0 auto;
         }
 
-        footer > p {
+        footer>p {
             color: var(--c-text-light);
             padding: 0;
             margin: 0;
@@ -176,12 +179,25 @@
             border-radius: 1rem;
             display: block;
             text-decoration: none;
-            border: 1px solid var(--c-border);
+            background-color: var(--c-card-background);
         }
 
         main>a:hover {
-            background-color: var(--c-accent-hover);
+            background-color: var(--c-card-background-hover);
         }
+
+        main>a:hover>article>h2 {
+            color: var(--c-button-text-hover);
+        }
+
+        main>a:hover>article>p {
+            color: var(--c-button-text-hover);
+        }
+
+        main>a>article>h2 {
+            color: var(--c-button-text);
+        }
+
 
         picture,
         img {
@@ -204,17 +220,6 @@
             min-height: 5rem;
         } */
 
-        picture::after,
-        video::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            box-shadow: inset 0 -1px 0px 0px var(--c-border);
-            overflow: hidden;
-        }
 
         p {
             color: var(--c-text);
@@ -288,6 +293,7 @@
         header>p {
             margin-bottom: 1rem;
         }
+
     </style>
 
     <!-- Basic Open Graph -->
@@ -320,14 +326,15 @@
 
 <body>
     <header>
-        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none">
-            <circle cx="24" cy="24" r="24" fill="var(--c-whale-bg)" />
+        <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" fill="none">
+            <path fill="var(--c-whale-bg)" d="M28 56a28 28 0 1 0 0-56 28 28 0 0 0 0 56Z" />
             <path fill="var(--c-whale-belly)"
-                d="M17.4 47.2A23.4 23.4 0 0 0 46 31a.9.9 0 0 0-.6-1L1.6 18a.8.8 0 0 0-1 .6 24 24 0 0 0 16.8 28.6Z" />
+                d="M21.4 51.2A23.4 23.4 0 0 0 50 35a.9.9 0 0 0-.6-1L5.6 22a.8.8 0 0 0-1 .6 24 24 0 0 0 16.8 28.6Z" />
             <path fill="var(--c-whale-body)"
-                d="M38.6 42.4c4-3 7-7.2 8.5-12.4 2-7.5.8-16.7-6.2-19a.4.4 0 0 0-.6.5c0 1.5-.1 2.9-.3 4.1l-.2 1.3a1 1 0 0 1-1 .8h-1.5c-1.4 0-3 0-4.7-.5-.3 0-.6.2-.6.5.9 5.1 6.5 7.4 9.3 7.6.6 0 1.1.5.8 1-.7 1.2-2.8 1.7-5.2 1L1.6 18c-.4 0-.8.2-.7.7 2.2 10.8 11 20 23 23.2 5 1.3 10 1.4 14.7.5Z" />
-            <circle cx="18" cy="31" r="2" fill="var(--c-whale-eye)" />
+                d="M42.6 46.4c4-3 7-7.2 8.5-12.4 2-7.5.8-16.7-6.2-19a.4.4 0 0 0-.6.5c0 1.5-.1 2.9-.3 4.1l-.2 1.3a1 1 0 0 1-1 .8h-1.5c-1.4 0-3 0-4.7-.5-.3 0-.6.2-.6.5.9 5.1 6.5 7.4 9.3 7.6.6 0 1.1.5.8 1-.7 1.2-2.8 1.7-5.2 1L5.6 22c-.4 0-.8.2-.7.7 2.2 10.8 11 20 23 23.2 5 1.3 10 1.4 14.7.5Z" />
+            <path fill="var(--c-whale-eye)" d="M22 37a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
         </svg>
+
 
         <h1>Laurent Baumann</h1>
         <p>I am currently the founder and CEO of PopStage.</p>
@@ -445,6 +452,7 @@
     </footer>
 
     <!-- Scripts -->
+    <!--
     <script type="text/javascript">
         class ShadedBox {
             constructor(domEl, param) {
@@ -539,6 +547,7 @@
 
 
     </script>
+     Scripts -->
 </body>
 
 </html>
