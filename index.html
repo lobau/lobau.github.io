@@ -5,29 +5,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
-        content="Since 2006, I helped companies such as Bohemian Coding, Upthere, Apple, Sandisk, Western Digital, and more to build products used by millions." />
+        content="Since 2006, I help companies such as Bohemian Coding, Upthere, Apple, Sandisk, Western Digital, and more to build products used by millions." />
     <title>Laurent Baumann</title>
 
     <!-- Stylesheet -->
     <style type="text/css">
-        @font-face {
-            font-family: 'Silka';
-            src: url('fonts/silka-regular.woff2') format('woff2');
-            font-weight: 400;
-            font-style: normal;
-        }
-
-        @font-face {
-            font-family: 'Silka';
-            src: url('fonts/silka-bold.woff2') format('woff2');
-            font-weight: 600;
-            font-style: normal;
-        }
-
-
         :root {
             --em-size: 16px;
-            --font-stack: "Silka", sans-serif;
+            --font-stack: system-ui, sans-serif;
 
             --c-plate: white;
             --c-text: #3F3A36;
@@ -84,6 +69,10 @@
             margin: 0;
             border: none;
             font-family: var(--font-stack);
+        }
+
+        *:focus-visible {
+            outline: 2px solid var(--c-whale-body);
         }
 
         body {
@@ -247,10 +236,6 @@
             --text-color: var(--c-link-hover);
         }
 
-        p>a:focus {
-            outline: 1px solid var(--c-accent)
-        }
-
         p>a:before {
             transform: scaleY(.07);
             transform-origin: bottom right
@@ -338,7 +323,7 @@
 
         <h1>Laurent Baumann</h1>
         <p>I am currently the founder and CEO of PopStage.</p>
-        <p>Since 2006, I helped companies such as Bohemian Coding, Upthere, Apple, Sandisk, Western Digital, and more to
+        <p>Since 2006, I help companies such as Bohemian Coding, Upthere, Apple, Sandisk, Western Digital, and more to
             build products used by millions.</p>
         <a href="https://twitter.com/lobau" target="_blank">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
@@ -415,7 +400,7 @@
             <li>
                 <article>
                     <h2>DrawIt & Sketch</h2>
-                    <p>Around 2007, after being fed up using Photoshop for UI design, I decided to look around for a
+                    <p>Around 2007, after being fed up using Photoshop for UI, I decided to look around for a
                         better solution.
                         Eventually, I found the website of Pieter Omvlee, who was working, on his own, on a cool
                         software called DrawIt.</p>
@@ -450,104 +435,6 @@
         <p>©2022 Laurent Baumann</p>
         <p>hello <strong>à</strong> lobau.io</p>
     </footer>
-
-    <!-- Scripts -->
-    <!--
-    <script type="text/javascript">
-        class ShadedBox {
-            constructor(domEl, param) {
-                this.view = domEl;
-                this.param = param;
-                this.shadow = this.param.shadow || "255, 0, 0";
-                this.size = this.param.size || "400px";
-                this.elevation = this.param.elevation || 30;
-                this.transparency = this.param.transparency || 0.15;
-
-                var position = this.view.getBoundingClientRect();
-                var objectX = position.x + position.width / 2;
-                var objectY = position.y + position.height / 2;
-
-                this.updateShadow({
-                    x: objectX,
-                    y: objectY - 200,
-                });
-
-                window.addEventListener(
-                    "mousemove",
-                    function (e) {
-                        this.updateShadow(e);
-                    }.bind(this)
-                );
-            }
-
-            updateShadow(e) {
-                var position = this.view.getBoundingClientRect();
-
-                var mouseX = e.x;
-                var mouseY = e.y;
-
-                var objectX = position.x + position.width / 2;
-                var objectY = position.y + position.height / 2;
-
-                var distanceX = objectX - mouseX;
-                var distanceY = objectY - mouseY + 160; // so shadow is visible on hover
-
-                var distanceToMouseX = mouseX - position.x;
-                var distanceToMouseY = mouseY - position.y;
-
-                this.view.style.backgroundImage = `radial-gradient(${this.size} at ${distanceToMouseX}px ${distanceToMouseY}px, var(--gradient-light), var(--gradient-dark))`;
-
-                var maxShadows = 6;
-                var shadowString = "";
-                shadowString += `inset 0px 0px 0px 1px var(--c-border), `;
-
-                var offsetX, offsetY, blur, falloff, transparency, distance;
-                for (var i = 1; i < maxShadows; i++) {
-                    if (i != 1) {
-                        shadowString += ", ";
-                    }
-                    offsetX = distanceX / (i * i * this.elevation);
-                    offsetY = distanceY / (i * i * this.elevation);
-                    distance = Math.abs(offsetX) + Math.abs(offsetY);
-
-                    blur = distance / 1.5;
-                    falloff = distance / 5;
-                    transparency = this.transparency / i;
-                    shadowString += `${offsetX}px ${offsetY}px ${blur}px -${falloff}px rgba(${this.shadow}, ${transparency})`;
-                }
-
-                var maxOffset = 3;
-                var innerShadowOffsetX = Math.min(
-                    Math.max(distanceX / 100, -maxOffset),
-                    maxOffset
-                );
-                var innerShadowOffsetY = Math.min(
-                    Math.max(distanceY / 100, -maxOffset),
-                    maxOffset
-                );
-                shadowString += `, inset ${innerShadowOffsetX}px ${innerShadowOffsetY}px 5px -1px var(--gradient-light)`;
-
-                this.view.style.boxShadow = shadowString;
-            }
-        }
-
-        var buttonStyle = {
-            shadow: "85, 3, 77",
-            size: "500px",
-            elevation: 80,
-            transparency: 0.08,
-        };
-
-        var Shaded_elements = [];
-        var shaded_el = document.querySelectorAll("header > a");
-        for (var i = 0; i < shaded_el.length; i++) {
-            console.log(shaded_el[i]);
-            Shaded_elements.push(new ShadedBox(shaded_el[i], buttonStyle));
-        }
-
-
-    </script>
-     Scripts -->
 </body>
 
 </html>
